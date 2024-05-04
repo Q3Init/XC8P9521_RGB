@@ -1,0 +1,1626 @@
+COFF File and Optional Headers
+Processor Type       xc8p9521
+Time Stamp           Fri May 03 20:23:27 2024
+Number of Sections   67
+Number of Symbols    252
+Characteristics      0x2
+  File is executable.
+
+Section Header
+Name                    sharebank
+Address                 0x20
+Size of Section         7
+Number of Relocations   0
+Number of Line Numbers  0
+Flags                   0x5080
+  Uninitialized data.
+  Absolute.
+  Overlaid with other sections from different objects modules.
+
+Section Header
+Name                    UD_abs_XC8P9521_PWM_3_10
+Address                 0x10
+Size of Section         1
+Number of Relocations   0
+Number of Line Numbers  0
+Flags                   0x5080
+  Uninitialized data.
+  Absolute.
+  Overlaid with other sections from different objects modules.
+
+Section Header
+Name                    UD_abs_XC8P9521_PWM_3_11
+Address                 0x11
+Size of Section         1
+Number of Relocations   0
+Number of Line Numbers  0
+Flags                   0x5080
+  Uninitialized data.
+  Absolute.
+  Overlaid with other sections from different objects modules.
+
+Section Header
+Name                    UDL_XC8P9521_PWM_3_0
+Address                 0x1b
+Size of Section         2
+Number of Relocations   0
+Number of Line Numbers  0
+Flags                   0x80
+  Uninitialized data.
+
+Section Header
+Name                    ID_XC8P9521_PWM_3_0
+Address                 0x1d
+Size of Section         2
+Number of Relocations   0
+Number of Line Numbers  1
+Flags                   0x40
+  Initialized data.
+
+Line Number Table
+Line     Address  Symbol
+121      0x1d     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+
+Section Header
+Name                    ID_XC8P9521_PWM_3_0_i
+Address                 0x271
+Size of Section         4
+Number of Relocations   0
+Number of Line Numbers  0
+Flags                   0x100
+  Initialized data for ROM.
+
+Section Header
+Name                    ID_XC8P9521_PWM_3_1
+Address                 0x27
+Size of Section         2
+Number of Relocations   0
+Number of Line Numbers  1
+Flags                   0x40
+  Initialized data.
+
+Line Number Table
+Line     Address  Symbol
+127      0x27     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+
+Section Header
+Name                    ID_XC8P9521_PWM_3_1_i
+Address                 0x273
+Size of Section         4
+Number of Relocations   0
+Number of Line Numbers  0
+Flags                   0x100
+  Initialized data for ROM.
+
+Section Header
+Name                    ID_XC8P9521_PWM_3_2
+Address                 0x29
+Size of Section         2
+Number of Relocations   0
+Number of Line Numbers  1
+Flags                   0x40
+  Initialized data.
+
+Line Number Table
+Line     Address  Symbol
+133      0x29     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+
+Section Header
+Name                    ID_XC8P9521_PWM_3_2_i
+Address                 0x275
+Size of Section         4
+Number of Relocations   0
+Number of Line Numbers  0
+Flags                   0x100
+  Initialized data for ROM.
+
+Section Header
+Name                    ID_XC8P9521_PWM_3_3
+Address                 0x2b
+Size of Section         2
+Number of Relocations   0
+Number of Line Numbers  1
+Flags                   0x40
+  Initialized data.
+
+Line Number Table
+Line     Address  Symbol
+139      0x2b     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+
+Section Header
+Name                    ID_XC8P9521_PWM_3_3_i
+Address                 0x277
+Size of Section         4
+Number of Relocations   0
+Number of Line Numbers  0
+Flags                   0x100
+  Initialized data for ROM.
+
+Section Header
+Name                    ID_XC8P9521_PWM_3_4
+Address                 0x2d
+Size of Section         2
+Number of Relocations   0
+Number of Line Numbers  1
+Flags                   0x40
+  Initialized data.
+
+Line Number Table
+Line     Address  Symbol
+145      0x2d     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+
+Section Header
+Name                    ID_XC8P9521_PWM_3_4_i
+Address                 0x279
+Size of Section         4
+Number of Relocations   0
+Number of Line Numbers  0
+Flags                   0x100
+  Initialized data for ROM.
+
+Section Header
+Name                    ID_XC8P9521_PWM_3_5
+Address                 0x2f
+Size of Section         2
+Number of Relocations   0
+Number of Line Numbers  1
+Flags                   0x40
+  Initialized data.
+
+Line Number Table
+Line     Address  Symbol
+151      0x2f     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+
+Section Header
+Name                    ID_XC8P9521_PWM_3_5_i
+Address                 0x27b
+Size of Section         4
+Number of Relocations   0
+Number of Line Numbers  0
+Flags                   0x100
+  Initialized data for ROM.
+
+Section Header
+Name                    ID_XC8P9521_PWM_3_6
+Address                 0x31
+Size of Section         2
+Number of Relocations   0
+Number of Line Numbers  1
+Flags                   0x40
+  Initialized data.
+
+Line Number Table
+Line     Address  Symbol
+157      0x31     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+
+Section Header
+Name                    ID_XC8P9521_PWM_3_6_i
+Address                 0x27d
+Size of Section         4
+Number of Relocations   0
+Number of Line Numbers  0
+Flags                   0x100
+  Initialized data for ROM.
+
+Section Header
+Name                    ID_XC8P9521_PWM_3_7
+Address                 0x33
+Size of Section         2
+Number of Relocations   0
+Number of Line Numbers  1
+Flags                   0x40
+  Initialized data.
+
+Line Number Table
+Line     Address  Symbol
+163      0x33     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+
+Section Header
+Name                    ID_XC8P9521_PWM_3_7_i
+Address                 0x27f
+Size of Section         4
+Number of Relocations   0
+Number of Line Numbers  0
+Flags                   0x100
+  Initialized data for ROM.
+
+Section Header
+Name                    ID_XC8P9521_PWM_3_8
+Address                 0x35
+Size of Section         2
+Number of Relocations   0
+Number of Line Numbers  1
+Flags                   0x40
+  Initialized data.
+
+Line Number Table
+Line     Address  Symbol
+169      0x35     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+
+Section Header
+Name                    ID_XC8P9521_PWM_3_8_i
+Address                 0x281
+Size of Section         4
+Number of Relocations   0
+Number of Line Numbers  0
+Flags                   0x100
+  Initialized data for ROM.
+
+Section Header
+Name                    ID_XC8P9521_PWM_3_9
+Address                 0x37
+Size of Section         2
+Number of Relocations   0
+Number of Line Numbers  1
+Flags                   0x40
+  Initialized data.
+
+Line Number Table
+Line     Address  Symbol
+175      0x37     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+
+Section Header
+Name                    ID_XC8P9521_PWM_3_9_i
+Address                 0x283
+Size of Section         4
+Number of Relocations   0
+Number of Line Numbers  0
+Flags                   0x100
+  Initialized data for ROM.
+
+Section Header
+Name                    ID_XC8P9521_PWM_3_10
+Address                 0x39
+Size of Section         2
+Number of Relocations   0
+Number of Line Numbers  1
+Flags                   0x40
+  Initialized data.
+
+Line Number Table
+Line     Address  Symbol
+181      0x39     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+
+Section Header
+Name                    ID_XC8P9521_PWM_3_10_i
+Address                 0x285
+Size of Section         4
+Number of Relocations   0
+Number of Line Numbers  0
+Flags                   0x100
+  Initialized data for ROM.
+
+Section Header
+Name                    ID_XC8P9521_PWM_3_11
+Address                 0x3b
+Size of Section         2
+Number of Relocations   0
+Number of Line Numbers  1
+Flags                   0x40
+  Initialized data.
+
+Line Number Table
+Line     Address  Symbol
+187      0x3b     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+
+Section Header
+Name                    ID_XC8P9521_PWM_3_11_i
+Address                 0x287
+Size of Section         4
+Number of Relocations   0
+Number of Line Numbers  0
+Flags                   0x100
+  Initialized data for ROM.
+
+Section Header
+Name                    ID_XC8P9521_PWM_3_12
+Address                 0x3d
+Size of Section         2
+Number of Relocations   0
+Number of Line Numbers  1
+Flags                   0x40
+  Initialized data.
+
+Line Number Table
+Line     Address  Symbol
+193      0x3d     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+
+Section Header
+Name                    ID_XC8P9521_PWM_3_12_i
+Address                 0x289
+Size of Section         4
+Number of Relocations   0
+Number of Line Numbers  0
+Flags                   0x100
+  Initialized data for ROM.
+
+Section Header
+Name                    ID_XC8P9521_PWM_3_13
+Address                 0x12
+Size of Section         3
+Number of Relocations   0
+Number of Line Numbers  1
+Flags                   0x40
+  Initialized data.
+
+Line Number Table
+Line     Address  Symbol
+199      0x12     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+
+Section Header
+Name                    ID_XC8P9521_PWM_3_13_i
+Address                 0x268
+Size of Section         6
+Number of Relocations   0
+Number of Line Numbers  0
+Flags                   0x100
+  Initialized data for ROM.
+
+Section Header
+Name                    ID_XC8P9521_PWM_3_14
+Address                 0x15
+Size of Section         3
+Number of Relocations   0
+Number of Line Numbers  1
+Flags                   0x40
+  Initialized data.
+
+Line Number Table
+Line     Address  Symbol
+205      0x15     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+
+Section Header
+Name                    ID_XC8P9521_PWM_3_14_i
+Address                 0x26b
+Size of Section         6
+Number of Relocations   0
+Number of Line Numbers  0
+Flags                   0x100
+  Initialized data for ROM.
+
+Section Header
+Name                    ID_XC8P9521_PWM_3_15
+Address                 0x18
+Size of Section         3
+Number of Relocations   0
+Number of Line Numbers  1
+Flags                   0x40
+  Initialized data.
+
+Line Number Table
+Line     Address  Symbol
+211      0x18     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+
+Section Header
+Name                    ID_XC8P9521_PWM_3_15_i
+Address                 0x26e
+Size of Section         6
+Number of Relocations   0
+Number of Line Numbers  0
+Flags                   0x100
+  Initialized data for ROM.
+
+Section Header
+Name                    STARTUP
+Address                 0
+Size of Section         2
+Number of Relocations   0
+Number of Line Numbers  1
+Flags                   0x1020
+  Executable code.
+  Absolute.
+
+Line Number Table
+Line     Address  Symbol
+284      0        C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+
+Section Header
+Name                    c_interrupt
+Address                 0x3
+Size of Section         0
+Number of Relocations   0
+Number of Line Numbers  0
+Flags                   0x1020
+  Executable code.
+  Absolute.
+
+Section Header
+Name                    .org_8
+Address                 0x8
+Size of Section         42
+Number of Relocations   0
+Number of Line Numbers  21
+Flags                   0x1020
+  Executable code.
+  Absolute.
+
+Line Number Table
+Line     Address  Symbol
+299      0x8      C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+300      0x9      C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+301      0xa      C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+302      0xb      C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+304      0xc      C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+305      0xd      C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+307      0xe      C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+309      0xf      C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+311      0x10     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+313      0x11     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+314      0x12     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+316      0x13     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+317      0x14     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+320      0x15     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+321      0x16     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+323      0x17     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+324      0x18     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+327      0x19     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+328      0x1a     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+329      0x1b     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+332      0x1c     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+
+Section Header
+Name                    code_XC8P9521_PWM_3
+Address                 0x28b
+Size of Section         0
+Number of Relocations   0
+Number of Line Numbers  0
+Flags                   0x20
+  Executable code.
+
+Section Header
+Name                    S_XC8P9521_PWM_3__main
+Address                 0x177
+Size of Section         164
+Number of Relocations   0
+Number of Line Numbers  82
+Flags                   0x20
+  Executable code.
+
+Line Number Table
+Line     Address  Symbol
+367      0x177    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+369      0x178    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+371      0x179    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+373      0x17a    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+376      0x17b    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+377      0x17c    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+378      0x17d    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+379      0x17e    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+381      0x17f    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+383      0x180    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+385      0x181    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+386      0x182    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+387      0x183    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+388      0x184    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+389      0x185    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+390      0x186    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+392      0x187    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+394      0x188    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+396      0x189    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+398      0x18a    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+400      0x18b    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+401      0x18c    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+402      0x18d    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+403      0x18e    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+404      0x18f    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+405      0x190    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+406      0x191    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+407      0x192    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+408      0x193    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+410      0x194    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+411      0x195    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+413      0x196    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+414      0x197    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+415      0x198    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+419      0x199    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+420      0x19a    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+421      0x19b    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+422      0x19c    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+423      0x19d    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+424      0x19e    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+426      0x19f    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+427      0x1a0    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+429      0x1a1    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+431      0x1a2    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+432      0x1a3    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+433      0x1a4    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+434      0x1a5    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+435      0x1a6    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+436      0x1a7    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+438      0x1a8    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+439      0x1a9    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+441      0x1aa    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+442      0x1ab    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+445      0x1ac    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+446      0x1ad    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+447      0x1ae    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+451      0x1af    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+452      0x1b0    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+453      0x1b1    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+454      0x1b2    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+455      0x1b3    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+456      0x1b4    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+457      0x1b5    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+458      0x1b6    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+460      0x1b7    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+461      0x1b8    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+462      0x1b9    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+463      0x1ba    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+465      0x1bb    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+467      0x1bc    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+469      0x1bd    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+470      0x1be    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+473      0x1bf    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+474      0x1c0    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+475      0x1c1    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+476      0x1c2    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+478      0x1c3    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+481      0x1c4    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+483      0x1c5    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+485      0x1c6    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+486      0x1c7    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+488      0x1c8    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+
+Section Header
+Name                    S_XC8P9521_PWM_3__output_process
+Address                 0x1c9
+Size of Section         136
+Number of Relocations   0
+Number of Line Numbers  68
+Flags                   0x20
+  Executable code.
+
+Line Number Table
+Line     Address  Symbol
+501      0x1c9    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+502      0x1ca    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+503      0x1cb    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+504      0x1cc    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+505      0x1cd    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+507      0x1ce    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+508      0x1cf    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+509      0x1d0    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+510      0x1d1    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+513      0x1d2    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+515      0x1d3    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+517      0x1d4    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+520      0x1d5    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+521      0x1d6    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+522      0x1d7    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+523      0x1d8    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+525      0x1d9    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+526      0x1da    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+529      0x1db    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+530      0x1dc    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+531      0x1dd    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+532      0x1de    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+534      0x1df    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+536      0x1e0    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+537      0x1e1    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+538      0x1e2    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+539      0x1e3    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+541      0x1e4    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+544      0x1e5    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+545      0x1e6    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+546      0x1e7    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+547      0x1e8    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+549      0x1e9    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+550      0x1ea    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+553      0x1eb    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+554      0x1ec    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+555      0x1ed    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+556      0x1ee    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+558      0x1ef    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+560      0x1f0    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+561      0x1f1    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+562      0x1f2    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+563      0x1f3    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+565      0x1f4    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+567      0x1f5    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+570      0x1f6    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+571      0x1f7    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+572      0x1f8    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+573      0x1f9    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+575      0x1fa    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+576      0x1fb    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+579      0x1fc    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+580      0x1fd    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+581      0x1fe    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+582      0x1ff    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+584      0x200    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+586      0x201    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+587      0x202    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+588      0x203    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+589      0x204    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+591      0x205    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+594      0x206    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+596      0x207    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+597      0x208    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+598      0x209    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+599      0x20a    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+601      0x20b    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+605      0x20c    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+
+Section Header
+Name                    S_XC8P9521_PWM_3__rgb_process
+Address                 0xa8
+Size of Section         218
+Number of Relocations   0
+Number of Line Numbers  109
+Flags                   0x20
+  Executable code.
+
+Line Number Table
+Line     Address  Symbol
+619      0xa8     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+620      0xa9     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+621      0xaa     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+622      0xab     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+624      0xac     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+626      0xad     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+627      0xae     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+628      0xaf     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+629      0xb0     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+630      0xb1     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+631      0xb2     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+632      0xb3     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+635      0xb4     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+636      0xb5     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+637      0xb6     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+638      0xb7     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+640      0xb8     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+641      0xb9     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+642      0xba     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+643      0xbb     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+644      0xbc     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+645      0xbd     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+646      0xbe     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+648      0xbf     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+649      0xc0     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+650      0xc1     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+651      0xc2     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+654      0xc3     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+655      0xc4     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+656      0xc5     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+657      0xc6     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+659      0xc7     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+660      0xc8     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+661      0xc9     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+664      0xca     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+665      0xcb     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+666      0xcc     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+667      0xcd     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+669      0xce     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+670      0xcf     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+673      0xd0     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+675      0xd1     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+676      0xd2     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+678      0xd3     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+679      0xd4     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+681      0xd5     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+682      0xd6     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+684      0xd7     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+687      0xd8     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+688      0xd9     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+689      0xda     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+690      0xdb     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+692      0xdc     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+693      0xdd     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+694      0xde     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+697      0xdf     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+698      0xe0     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+699      0xe1     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+700      0xe2     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+702      0xe3     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+703      0xe4     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+706      0xe5     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+709      0xe6     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+710      0xe7     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+711      0xe8     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+712      0xe9     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+713      0xea     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+715      0xeb     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+716      0xec     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+717      0xed     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+718      0xee     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+721      0xef     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+722      0xf0     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+724      0xf1     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+726      0xf2     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+728      0xf3     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+731      0xf4     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+733      0xf5     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+734      0xf6     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+736      0xf7     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+738      0xf8     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+741      0xf9     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+743      0xfa     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+745      0xfb     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+746      0xfc     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+748      0xfd     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+751      0xfe     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+753      0xff     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+755      0x100    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+757      0x101    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+758      0x102    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+761      0x103    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+762      0x104    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+763      0x105    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+764      0x106    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+765      0x107    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+767      0x108    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+768      0x109    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+769      0x10a    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+770      0x10b    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+773      0x10c    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+774      0x10d    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+776      0x10e    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+779      0x10f    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+780      0x110    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+782      0x111    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+785      0x112    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+786      0x113    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+790      0x114    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+
+Section Header
+Name                    S_XC8P9521_PWM_3__key_process
+Address                 0x1d
+Size of Section         278
+Number of Relocations   0
+Number of Line Numbers  139
+Flags                   0x20
+  Executable code.
+
+Line Number Table
+Line     Address  Symbol
+804      0x1d     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+805      0x1e     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+807      0x1f     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+808      0x20     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+809      0x21     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+810      0x22     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+813      0x23     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+814      0x24     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+815      0x25     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+816      0x26     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+817      0x27     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+818      0x28     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+820      0x29     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+821      0x2a     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+823      0x2b     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+824      0x2c     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+825      0x2d     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+826      0x2e     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+827      0x2f     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+828      0x30     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+830      0x31     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+831      0x32     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+834      0x33     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+835      0x34     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+836      0x35     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+837      0x36     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+838      0x37     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+840      0x38     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+841      0x39     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+842      0x3a     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+843      0x3b     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+846      0x3c     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+847      0x3d     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+849      0x3e     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+850      0x3f     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+852      0x40     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+854      0x41     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+855      0x42     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+857      0x43     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+860      0x44     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+861      0x45     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+863      0x46     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+865      0x47     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+866      0x48     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+868      0x49     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+869      0x4a     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+871      0x4b     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+874      0x4c     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+875      0x4d     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+877      0x4e     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+879      0x4f     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+880      0x50     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+882      0x51     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+883      0x52     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+885      0x53     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+888      0x54     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+889      0x55     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+890      0x56     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+891      0x57     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+892      0x58     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+893      0x59     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+895      0x5a     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+896      0x5b     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+897      0x5c     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+898      0x5d     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+899      0x5e     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+900      0x5f     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+902      0x60     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+904      0x61     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+905      0x62     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+907      0x63     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+909      0x64     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+910      0x65     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+913      0x66     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+914      0x67     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+917      0x68     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+918      0x69     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+919      0x6a     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+920      0x6b     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+921      0x6c     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+922      0x6d     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+924      0x6e     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+925      0x6f     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+926      0x70     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+927      0x71     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+930      0x72     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+931      0x73     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+932      0x74     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+933      0x75     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+934      0x76     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+935      0x77     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+937      0x78     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+938      0x79     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+940      0x7a     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+941      0x7b     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+942      0x7c     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+943      0x7d     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+944      0x7e     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+945      0x7f     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+947      0x80     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+948      0x81     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+950      0x82     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+951      0x83     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+953      0x84     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+954      0x85     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+955      0x86     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+956      0x87     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+958      0x88     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+959      0x89     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+960      0x8a     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+961      0x8b     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+962      0x8c     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+963      0x8d     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+964      0x8e     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+966      0x8f     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+967      0x90     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+968      0x91     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+969      0x92     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+972      0x93     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+973      0x94     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+975      0x95     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+978      0x96     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+979      0x97     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+981      0x98     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+984      0x99     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+985      0x9a     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+987      0x9b     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+990      0x9c     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+991      0x9d     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+992      0x9e     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+993      0x9f     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+994      0xa0     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+995      0xa1     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+997      0xa2     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+998      0xa3     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1000     0xa4     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1003     0xa5     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1004     0xa6     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1007     0xa7     C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+
+Section Header
+Name                    S_XC8P9521_PWM_3__shake_process
+Address                 0x25e
+Size of Section         20
+Number of Relocations   0
+Number of Line Numbers  10
+Flags                   0x20
+  Executable code.
+
+Line Number Table
+Line     Address  Symbol
+1021     0x25e    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1022     0x25f    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1024     0x260    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1025     0x261    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1026     0x262    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1027     0x263    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1028     0x264    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1029     0x265    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1030     0x266    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1033     0x267    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+
+Section Header
+Name                    S_XC8P9521_PWM_3__beep_process
+Address                 0x20d
+Size of Section         100
+Number of Relocations   0
+Number of Line Numbers  50
+Flags                   0x20
+  Executable code.
+
+Line Number Table
+Line     Address  Symbol
+1048     0x20d    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1049     0x20e    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1050     0x20f    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1051     0x210    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1052     0x211    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1054     0x212    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1055     0x213    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1056     0x214    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1057     0x215    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1060     0x216    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1062     0x217    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1065     0x218    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1067     0x219    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1069     0x21a    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1070     0x21b    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1071     0x21c    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1072     0x21d    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1073     0x21e    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1074     0x21f    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1075     0x220    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1077     0x221    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1078     0x222    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1079     0x223    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1080     0x224    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1082     0x225    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1084     0x226    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1086     0x227    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1089     0x228    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1091     0x229    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1092     0x22a    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1093     0x22b    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1094     0x22c    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1095     0x22d    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1096     0x22e    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1097     0x22f    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1099     0x230    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1101     0x231    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1102     0x232    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1103     0x233    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1104     0x234    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1106     0x235    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1108     0x236    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1109     0x237    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1112     0x238    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1113     0x239    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1114     0x23a    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1115     0x23b    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1117     0x23c    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1119     0x23d    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1123     0x23e    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+
+Section Header
+Name                    S_XC8P9521_PWM_3__file_project_init
+Address                 0x1
+Size of Section         14
+Number of Relocations   0
+Number of Line Numbers  7
+Flags                   0x20
+  Executable code.
+
+Line Number Table
+Line     Address  Symbol
+1135     0x1      C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1136     0x2      C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1138     0x3      C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1139     0x4      C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1141     0x5      C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1142     0x6      C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1144     0x7      C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+
+Section Header
+Name                    S_XC8P9521_PWM_3__file_init
+Address                 0x23f
+Size of Section         40
+Number of Relocations   0
+Number of Line Numbers  20
+Flags                   0x20
+  Executable code.
+
+Line Number Table
+Line     Address  Symbol
+1156     0x23f    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1157     0x240    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1159     0x241    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1160     0x242    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1162     0x243    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1164     0x244    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1166     0x245    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1167     0x246    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1169     0x247    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1170     0x248    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1172     0x249    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1173     0x24a    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1175     0x24b    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1176     0x24c    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1178     0x24d    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1179     0x24e    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1181     0x24f    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1182     0x250    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1184     0x251    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1186     0x252    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+
+Section Header
+Name                    S_XC8P9521_PWM_3__file_clrRam
+Address                 0x253
+Size of Section         22
+Number of Relocations   0
+Number of Line Numbers  11
+Flags                   0x20
+  Executable code.
+
+Line Number Table
+Line     Address  Symbol
+1198     0x253    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1199     0x254    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1201     0x255    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1202     0x256    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1203     0x257    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1204     0x258    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1206     0x259    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1208     0x25a    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1209     0x25b    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1212     0x25c    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+1214     0x25d    C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+
+Section Header
+Name                    UD_abs_xc8p9521_0
+Address                 0
+Size of Section         1
+Number of Relocations   0
+Number of Line Numbers  0
+Flags                   0x5080
+  Uninitialized data.
+  Absolute.
+  Overlaid with other sections from different objects modules.
+
+Section Header
+Name                    UD_abs_xc8p9521_1
+Address                 0x1
+Size of Section         1
+Number of Relocations   0
+Number of Line Numbers  0
+Flags                   0x5080
+  Uninitialized data.
+  Absolute.
+  Overlaid with other sections from different objects modules.
+
+Section Header
+Name                    UD_abs_xc8p9521_2
+Address                 0x2
+Size of Section         1
+Number of Relocations   0
+Number of Line Numbers  0
+Flags                   0x5080
+  Uninitialized data.
+  Absolute.
+  Overlaid with other sections from different objects modules.
+
+Section Header
+Name                    UD_abs_xc8p9521_3
+Address                 0x3
+Size of Section         1
+Number of Relocations   0
+Number of Line Numbers  0
+Flags                   0x5080
+  Uninitialized data.
+  Absolute.
+  Overlaid with other sections from different objects modules.
+
+Section Header
+Name                    UD_abs_xc8p9521_4
+Address                 0x4
+Size of Section         1
+Number of Relocations   0
+Number of Line Numbers  0
+Flags                   0x5080
+  Uninitialized data.
+  Absolute.
+  Overlaid with other sections from different objects modules.
+
+Section Header
+Name                    UD_abs_xc8p9521_5
+Address                 0x5
+Size of Section         1
+Number of Relocations   0
+Number of Line Numbers  0
+Flags                   0x5080
+  Uninitialized data.
+  Absolute.
+  Overlaid with other sections from different objects modules.
+
+Section Header
+Name                    UD_abs_xc8p9521_6
+Address                 0x6
+Size of Section         1
+Number of Relocations   0
+Number of Line Numbers  0
+Flags                   0x5080
+  Uninitialized data.
+  Absolute.
+  Overlaid with other sections from different objects modules.
+
+Section Header
+Name                    UD_abs_xc8p9521_7
+Address                 0x7
+Size of Section         1
+Number of Relocations   0
+Number of Line Numbers  0
+Flags                   0x5080
+  Uninitialized data.
+  Absolute.
+  Overlaid with other sections from different objects modules.
+
+Section Header
+Name                    UD_abs_xc8p9521_8
+Address                 0x8
+Size of Section         1
+Number of Relocations   0
+Number of Line Numbers  0
+Flags                   0x5080
+  Uninitialized data.
+  Absolute.
+  Overlaid with other sections from different objects modules.
+
+Section Header
+Name                    UD_abs_xc8p9521_9
+Address                 0x9
+Size of Section         1
+Number of Relocations   0
+Number of Line Numbers  0
+Flags                   0x5080
+  Uninitialized data.
+  Absolute.
+  Overlaid with other sections from different objects modules.
+
+Section Header
+Name                    UD_abs_xc8p9521_a
+Address                 0xa
+Size of Section         1
+Number of Relocations   0
+Number of Line Numbers  0
+Flags                   0x5080
+  Uninitialized data.
+  Absolute.
+  Overlaid with other sections from different objects modules.
+
+Section Header
+Name                    UD_abs_xc8p9521_b
+Address                 0xb
+Size of Section         1
+Number of Relocations   0
+Number of Line Numbers  0
+Flags                   0x5080
+  Uninitialized data.
+  Absolute.
+  Overlaid with other sections from different objects modules.
+
+Section Header
+Name                    UD_abs_xc8p9521_c
+Address                 0xc
+Size of Section         1
+Number of Relocations   0
+Number of Line Numbers  0
+Flags                   0x5080
+  Uninitialized data.
+  Absolute.
+  Overlaid with other sections from different objects modules.
+
+Section Header
+Name                    UD_abs_xc8p9521_d
+Address                 0xd
+Size of Section         1
+Number of Relocations   0
+Number of Line Numbers  0
+Flags                   0x5080
+  Uninitialized data.
+  Absolute.
+  Overlaid with other sections from different objects modules.
+
+Section Header
+Name                    UD_abs_xc8p9521_e
+Address                 0xe
+Size of Section         1
+Number of Relocations   0
+Number of Line Numbers  0
+Flags                   0x5080
+  Uninitialized data.
+  Absolute.
+  Overlaid with other sections from different objects modules.
+
+Section Header
+Name                    UD_abs_xc8p9521_f
+Address                 0xf
+Size of Section         1
+Number of Relocations   0
+Number of Line Numbers  0
+Flags                   0x5080
+  Uninitialized data.
+  Absolute.
+  Overlaid with other sections from different objects modules.
+
+Section Header
+Name                    code_xc8p9521
+Address                 0x28b
+Size of Section         0
+Number of Relocations   0
+Number of Line Numbers  0
+Flags                   0x20
+  Executable code.
+
+Section Header
+Name                    .cinit
+Address                 0x115
+Size of Section         196
+Number of Relocations   0
+Number of Line Numbers  0
+Flags                   0x100
+  Initialized data for ROM.
+
+Symbol Table
+Name                     Section          Value      Type  Class  NumAux 
+.file                    DEBUG            0          0     103    1   
+  file = C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm
+  line included = 0
+.file                    DEBUG            0          0     103    1   
+  file = C:\XJIDE\XJ_C_IDE_V1.7.6.240226\include/XC8P9521.inc
+  line included = 10
+.list                    DEBUG            0x1        0     108    0   
+.nolist                  DEBUG            0x3        0     108    0   
+.list                    DEBUG            0x53       0     108    0   
+.eof                     DEBUG            0          0     107    0   
+sharebank                sharebank        0x20       0     109    1   
+  length = 7
+  number of relocations = 0
+  number of line numbers = 0
+STK06                    sharebank        0x20       0     2      0   
+STK05                    sharebank        0x21       0     2      0   
+STK04                    sharebank        0x22       0     2      0   
+STK03                    sharebank        0x23       0     2      0   
+STK02                    sharebank        0x24       0     2      0   
+STK01                    sharebank        0x25       0     2      0   
+STK00                    sharebank        0x26       0     2      0   
+UD_abs_XC8P9521_PWM_3_10 UD_abs_XC8P9521_PWM_3_10 0x10       0     109    1   
+  length = 1
+  number of relocations = 0
+  number of line numbers = 0
+_A_BUFF                  UD_abs_XC8P9521_PWM_3_10 0x10       0     2      0   
+UD_abs_XC8P9521_PWM_3_11 UD_abs_XC8P9521_PWM_3_11 0x11       0     109    1   
+  length = 1
+  number of relocations = 0
+  number of line numbers = 0
+_R3_BUFF                 UD_abs_XC8P9521_PWM_3_11 0x11       0     2      0   
+UDL_XC8P9521_PWM_3_0     UDL_XC8P9521_PWM_3_0 0x1b       0     109    1   
+  length = 2
+  number of relocations = 0
+  number of line numbers = 0
+r0x1013                  UDL_XC8P9521_PWM_3_0 0x1b       0     3      0   
+r0x1014                  UDL_XC8P9521_PWM_3_0 0x1c       0     3      0   
+ID_XC8P9521_PWM_3_0      ID_XC8P9521_PWM_3_0 0x1d       0     109    1   
+  length = 2
+  number of relocations = 0
+  number of line numbers = 1
+_beep_delay              ID_XC8P9521_PWM_3_0 0x1d       0     2      0   
+ID_XC8P9521_PWM_3_1      ID_XC8P9521_PWM_3_1 0x27       0     109    1   
+  length = 2
+  number of relocations = 0
+  number of line numbers = 1
+_sys_delay               ID_XC8P9521_PWM_3_1 0x27       0     2      0   
+ID_XC8P9521_PWM_3_2      ID_XC8P9521_PWM_3_2 0x29       0     109    1   
+  length = 2
+  number of relocations = 0
+  number of line numbers = 1
+_beep_mode               ID_XC8P9521_PWM_3_2 0x29       0     2      0   
+ID_XC8P9521_PWM_3_3      ID_XC8P9521_PWM_3_3 0x2b       0     109    1   
+  length = 2
+  number of relocations = 0
+  number of line numbers = 1
+_beep_cnt                ID_XC8P9521_PWM_3_3 0x2b       0     2      0   
+ID_XC8P9521_PWM_3_4      ID_XC8P9521_PWM_3_4 0x2d       0     109    1   
+  length = 2
+  number of relocations = 0
+  number of line numbers = 1
+_led_mode                ID_XC8P9521_PWM_3_4 0x2d       0     2      0   
+ID_XC8P9521_PWM_3_5      ID_XC8P9521_PWM_3_5 0x2f       0     109    1   
+  length = 2
+  number of relocations = 0
+  number of line numbers = 1
+_led_switch              ID_XC8P9521_PWM_3_5 0x2f       0     2      0   
+ID_XC8P9521_PWM_3_6      ID_XC8P9521_PWM_3_6 0x31       0     109    1   
+  length = 2
+  number of relocations = 0
+  number of line numbers = 1
+_mode_switch             ID_XC8P9521_PWM_3_6 0x31       0     2      0   
+ID_XC8P9521_PWM_3_7      ID_XC8P9521_PWM_3_7 0x33       0     109    1   
+  length = 2
+  number of relocations = 0
+  number of line numbers = 1
+_color_pwm_duty          ID_XC8P9521_PWM_3_7 0x33       0     2      0   
+ID_XC8P9521_PWM_3_8      ID_XC8P9521_PWM_3_8 0x35       0     109    1   
+  length = 2
+  number of relocations = 0
+  number of line numbers = 1
+_once_pwm_duty           ID_XC8P9521_PWM_3_8 0x35       0     2      0   
+ID_XC8P9521_PWM_3_9      ID_XC8P9521_PWM_3_9 0x37       0     109    1   
+  length = 2
+  number of relocations = 0
+  number of line numbers = 1
+_cir_mode                ID_XC8P9521_PWM_3_9 0x37       0     2      0   
+ID_XC8P9521_PWM_3_10     ID_XC8P9521_PWM_3_10 0x39       0     109    1   
+  length = 2
+  number of relocations = 0
+  number of line numbers = 1
+_led_cnt                 ID_XC8P9521_PWM_3_10 0x39       0     2      0   
+ID_XC8P9521_PWM_3_11     ID_XC8P9521_PWM_3_11 0x3b       0     109    1   
+  length = 2
+  number of relocations = 0
+  number of line numbers = 1
+_fun_dty                 ID_XC8P9521_PWM_3_11 0x3b       0     2      0   
+ID_XC8P9521_PWM_3_12     ID_XC8P9521_PWM_3_12 0x3d       0     109    1   
+  length = 2
+  number of relocations = 0
+  number of line numbers = 1
+_cold_dty                ID_XC8P9521_PWM_3_12 0x3d       0     2      0   
+ID_XC8P9521_PWM_3_13     ID_XC8P9521_PWM_3_13 0x12       0     109    1   
+  length = 3
+  number of relocations = 0
+  number of line numbers = 1
+_pwrkey_delay            ID_XC8P9521_PWM_3_13 0x12       0     2      0   
+ID_XC8P9521_PWM_3_14     ID_XC8P9521_PWM_3_14 0x15       0     109    1   
+  length = 3
+  number of relocations = 0
+  number of line numbers = 1
+_ledkey_delay            ID_XC8P9521_PWM_3_14 0x15       0     2      0   
+ID_XC8P9521_PWM_3_15     ID_XC8P9521_PWM_3_15 0x18       0     109    1   
+  length = 3
+  number of relocations = 0
+  number of line numbers = 1
+_r_delay                 ID_XC8P9521_PWM_3_15 0x18       0     2      0   
+STARTUP                  STARTUP          0          0     109    1   
+  length = 2
+  number of relocations = 1
+  number of line numbers = 1
+c_interrupt              c_interrupt      0x3        0     109    1   
+  length = 0
+  number of relocations = 0
+  number of line numbers = 0
+__sdcc_interrupt         c_interrupt      0x3        0     6      0   
+_int_isr                 c_interrupt      0x3        0     2      0   
+.org_8                   .org_8           0x8        0     109    1   
+  length = 42
+  number of relocations = 15
+  number of line numbers = 21
+_00121_DS_               .org_8           0x15       0     6      0   
+_00123_DS_               .org_8           0x19       0     6      0   
+END_OF_INTERRUPT         .org_8           0x1c       0     6      0   
+code_XC8P9521_PWM_3      code_XC8P9521_PWM_3 0x28b      0     109    1   
+  length = 0
+  number of relocations = 0
+  number of line numbers = 0
+S_XC8P9521_PWM_3__main   S_XC8P9521_PWM_3__main 0x177      0     109    1   
+  length = 164
+  number of relocations = 54
+  number of line numbers = 82
+_main                    S_XC8P9521_PWM_3__main 0x177      0     2      0   
+_00323_DS_               S_XC8P9521_PWM_3__main 0x17b      0     6      0   
+_00361_DS_               S_XC8P9521_PWM_3__main 0x194      0     6      0   
+_00307_DS_               S_XC8P9521_PWM_3__main 0x199      0     6      0   
+_00362_DS_               S_XC8P9521_PWM_3__main 0x19f      0     6      0   
+_00363_DS_               S_XC8P9521_PWM_3__main 0x1a8      0     6      0   
+_00310_DS_               S_XC8P9521_PWM_3__main 0x1ac      0     6      0   
+_00315_DS_               S_XC8P9521_PWM_3__main 0x1bf      0     6      0   
+_00316_DS_               S_XC8P9521_PWM_3__main 0x1c4      0     6      0   
+S_XC8P9521_PWM_3__output_process S_XC8P9521_PWM_3__output_process 0x1c9      0     109    1   
+  length = 136
+  number of relocations = 44
+  number of line numbers = 68
+_output_process          S_XC8P9521_PWM_3__output_process 0x1c9      0     2      0   
+_00270_DS_               S_XC8P9521_PWM_3__output_process 0x1d2      0     6      0   
+_00271_DS_               S_XC8P9521_PWM_3__output_process 0x1d5      0     6      0   
+_00277_DS_               S_XC8P9521_PWM_3__output_process 0x1db      0     6      0   
+_00278_DS_               S_XC8P9521_PWM_3__output_process 0x1e5      0     6      0   
+_00284_DS_               S_XC8P9521_PWM_3__output_process 0x1eb      0     6      0   
+_00286_DS_               S_XC8P9521_PWM_3__output_process 0x1f6      0     6      0   
+_00292_DS_               S_XC8P9521_PWM_3__output_process 0x1fc      0     6      0   
+_00293_DS_               S_XC8P9521_PWM_3__output_process 0x206      0     6      0   
+_00297_DS_               S_XC8P9521_PWM_3__output_process 0x20c      0     6      0   
+S_XC8P9521_PWM_3__rgb_process S_XC8P9521_PWM_3__rgb_process 0xa8       0     109    1   
+  length = 218
+  number of relocations = 76
+  number of line numbers = 109
+_rgb_process             S_XC8P9521_PWM_3__rgb_process 0xa8       0     2      0   
+_00242_DS_               S_XC8P9521_PWM_3__rgb_process 0xb4       0     6      0   
+_00243_DS_               S_XC8P9521_PWM_3__rgb_process 0xc3       0     6      0   
+_00247_DS_               S_XC8P9521_PWM_3__rgb_process 0xca       0     6      0   
+_00248_DS_               S_XC8P9521_PWM_3__rgb_process 0xd0       0     6      0   
+_00249_DS_               S_XC8P9521_PWM_3__rgb_process 0xd8       0     6      0   
+_00253_DS_               S_XC8P9521_PWM_3__rgb_process 0xdf       0     6      0   
+_00254_DS_               S_XC8P9521_PWM_3__rgb_process 0xe5       0     6      0   
+_00255_DS_               S_XC8P9521_PWM_3__rgb_process 0xef       0     6      0   
+_00256_DS_               S_XC8P9521_PWM_3__rgb_process 0xf4       0     6      0   
+_00257_DS_               S_XC8P9521_PWM_3__rgb_process 0xf9       0     6      0   
+_00259_DS_               S_XC8P9521_PWM_3__rgb_process 0xfe       0     6      0   
+_00260_DS_               S_XC8P9521_PWM_3__rgb_process 0x10c      0     6      0   
+_00261_DS_               S_XC8P9521_PWM_3__rgb_process 0x10f      0     6      0   
+_00262_DS_               S_XC8P9521_PWM_3__rgb_process 0x112      0     6      0   
+_00265_DS_               S_XC8P9521_PWM_3__rgb_process 0x114      0     6      0   
+S_XC8P9521_PWM_3__key_process S_XC8P9521_PWM_3__key_process 0x1d       0     109    1   
+  length = 278
+  number of relocations = 85
+  number of line numbers = 139
+_key_process             S_XC8P9521_PWM_3__key_process 0x1d       0     2      0   
+_00168_DS_               S_XC8P9521_PWM_3__key_process 0x23       0     6      0   
+_00226_DS_               S_XC8P9521_PWM_3__key_process 0x29       0     6      0   
+_00227_DS_               S_XC8P9521_PWM_3__key_process 0x31       0     6      0   
+_00155_DS_               S_XC8P9521_PWM_3__key_process 0x3c       0     6      0   
+_00156_DS_               S_XC8P9521_PWM_3__key_process 0x44       0     6      0   
+_00157_DS_               S_XC8P9521_PWM_3__key_process 0x4c       0     6      0   
+_00163_DS_               S_XC8P9521_PWM_3__key_process 0x54       0     6      0   
+_00230_DS_               S_XC8P9521_PWM_3__key_process 0x5a       0     6      0   
+_00166_DS_               S_XC8P9521_PWM_3__key_process 0x66       0     6      0   
+_00169_DS_               S_XC8P9521_PWM_3__key_process 0x68       0     6      0   
+_00182_DS_               S_XC8P9521_PWM_3__key_process 0x72       0     6      0   
+_00231_DS_               S_XC8P9521_PWM_3__key_process 0x78       0     6      0   
+_00232_DS_               S_XC8P9521_PWM_3__key_process 0x80       0     6      0   
+_00170_DS_               S_XC8P9521_PWM_3__key_process 0x93       0     6      0   
+_00171_DS_               S_XC8P9521_PWM_3__key_process 0x96       0     6      0   
+_00172_DS_               S_XC8P9521_PWM_3__key_process 0x99       0     6      0   
+_00177_DS_               S_XC8P9521_PWM_3__key_process 0x9c       0     6      0   
+_00236_DS_               S_XC8P9521_PWM_3__key_process 0xa2       0     6      0   
+_00180_DS_               S_XC8P9521_PWM_3__key_process 0xa5       0     6      0   
+_00185_DS_               S_XC8P9521_PWM_3__key_process 0xa7       0     6      0   
+S_XC8P9521_PWM_3__shake_process S_XC8P9521_PWM_3__shake_process 0x25e      0     109    1   
+  length = 20
+  number of relocations = 6
+  number of line numbers = 10
+_shake_process           S_XC8P9521_PWM_3__shake_process 0x25e      0     2      0   
+_00150_DS_               S_XC8P9521_PWM_3__shake_process 0x267      0     6      0   
+S_XC8P9521_PWM_3__beep_process S_XC8P9521_PWM_3__beep_process 0x20d      0     109    1   
+  length = 100
+  number of relocations = 36
+  number of line numbers = 50
+_beep_process            S_XC8P9521_PWM_3__beep_process 0x20d      0     2      0   
+_00128_DS_               S_XC8P9521_PWM_3__beep_process 0x216      0     6      0   
+_00129_DS_               S_XC8P9521_PWM_3__beep_process 0x218      0     6      0   
+_00134_DS_               S_XC8P9521_PWM_3__beep_process 0x228      0     6      0   
+_00138_DS_               S_XC8P9521_PWM_3__beep_process 0x238      0     6      0   
+_00143_DS_               S_XC8P9521_PWM_3__beep_process 0x23e      0     6      0   
+S_XC8P9521_PWM_3__file_project_init S_XC8P9521_PWM_3__file_project_init 0x1        0     109    1   
+  length = 14
+  number of relocations = 2
+  number of line numbers = 7
+_file_project_init       S_XC8P9521_PWM_3__file_project_init 0x1        0     2      0   
+S_XC8P9521_PWM_3__file_init S_XC8P9521_PWM_3__file_init 0x23f      0     109    1   
+  length = 40
+  number of relocations = 4
+  number of line numbers = 20
+_file_init               S_XC8P9521_PWM_3__file_init 0x23f      0     2      0   
+S_XC8P9521_PWM_3__file_clrRam S_XC8P9521_PWM_3__file_clrRam 0x253      0     109    1   
+  length = 22
+  number of relocations = 7
+  number of line numbers = 11
+_file_clrRam             S_XC8P9521_PWM_3__file_clrRam 0x253      0     2      0   
+_00107_DS_               S_XC8P9521_PWM_3__file_clrRam 0x255      0     6      0   
+_00105_DS_               S_XC8P9521_PWM_3__file_clrRam 0x25c      0     6      0   
+.eof                     DEBUG            0          0     107    0   
+.file                    DEBUG            0          0     103    1   
+  file = xc8p9521.asm
+  line included = 0
+.file                    DEBUG            0          0     103    1   
+  file = ../../share/header/xc8p9521.inc
+  line included = 10
+.list                    DEBUG            0x1        0     108    0   
+.nolist                  DEBUG            0x3        0     108    0   
+.list                    DEBUG            0x53       0     108    0   
+.eof                     DEBUG            0          0     107    0   
+UD_abs_xc8p9521_0        UD_abs_xc8p9521_0 0          0     109    1   
+  length = 1
+  number of relocations = 0
+  number of line numbers = 0
+_IARbits                 UD_abs_xc8p9521_0 0          0     2      0   
+_IAR                     UD_abs_xc8p9521_0 0          0     2      0   
+UD_abs_xc8p9521_1        UD_abs_xc8p9521_1 0x1        0     109    1   
+  length = 1
+  number of relocations = 0
+  number of line numbers = 0
+_TCCbits                 UD_abs_xc8p9521_1 0x1        0     2      0   
+_TCC                     UD_abs_xc8p9521_1 0x1        0     2      0   
+UD_abs_xc8p9521_2        UD_abs_xc8p9521_2 0x2        0     109    1   
+  length = 1
+  number of relocations = 0
+  number of line numbers = 0
+_PCLbits                 UD_abs_xc8p9521_2 0x2        0     2      0   
+_PCL                     UD_abs_xc8p9521_2 0x2        0     2      0   
+UD_abs_xc8p9521_3        UD_abs_xc8p9521_3 0x3        0     109    1   
+  length = 1
+  number of relocations = 0
+  number of line numbers = 0
+_STATUSbits              UD_abs_xc8p9521_3 0x3        0     2      0   
+_STATUS                  UD_abs_xc8p9521_3 0x3        0     2      0   
+UD_abs_xc8p9521_4        UD_abs_xc8p9521_4 0x4        0     109    1   
+  length = 1
+  number of relocations = 0
+  number of line numbers = 0
+_RSRbits                 UD_abs_xc8p9521_4 0x4        0     2      0   
+_RSR                     UD_abs_xc8p9521_4 0x4        0     2      0   
+UD_abs_xc8p9521_5        UD_abs_xc8p9521_5 0x5        0     109    1   
+  length = 1
+  number of relocations = 0
+  number of line numbers = 0
+_PORT5bits               UD_abs_xc8p9521_5 0x5        0     2      0   
+_PORT5                   UD_abs_xc8p9521_5 0x5        0     2      0   
+UD_abs_xc8p9521_6        UD_abs_xc8p9521_6 0x6        0     109    1   
+  length = 1
+  number of relocations = 0
+  number of line numbers = 0
+_PORT6bits               UD_abs_xc8p9521_6 0x6        0     2      0   
+_PORT6                   UD_abs_xc8p9521_6 0x6        0     2      0   
+UD_abs_xc8p9521_7        UD_abs_xc8p9521_7 0x7        0     109    1   
+  length = 1
+  number of relocations = 0
+  number of line numbers = 0
+_LVDCONbits              UD_abs_xc8p9521_7 0x7        0     2      0   
+_LVDCON                  UD_abs_xc8p9521_7 0x7        0     2      0   
+UD_abs_xc8p9521_8        UD_abs_xc8p9521_8 0x8        0     109    1   
+  length = 1
+  number of relocations = 0
+  number of line numbers = 0
+_PWMCONbits              UD_abs_xc8p9521_8 0x8        0     2      0   
+_PWMCON                  UD_abs_xc8p9521_8 0x8        0     2      0   
+UD_abs_xc8p9521_9        UD_abs_xc8p9521_9 0x9        0     109    1   
+  length = 1
+  number of relocations = 0
+  number of line numbers = 0
+_PRDbits                 UD_abs_xc8p9521_9 0x9        0     2      0   
+_PRD                     UD_abs_xc8p9521_9 0x9        0     2      0   
+UD_abs_xc8p9521_a        UD_abs_xc8p9521_a 0xa        0     109    1   
+  length = 1
+  number of relocations = 0
+  number of line numbers = 0
+_PDC1bits                UD_abs_xc8p9521_a 0xa        0     2      0   
+_PDC1                    UD_abs_xc8p9521_a 0xa        0     2      0   
+UD_abs_xc8p9521_b        UD_abs_xc8p9521_b 0xb        0     109    1   
+  length = 1
+  number of relocations = 0
+  number of line numbers = 0
+_PDC2bits                UD_abs_xc8p9521_b 0xb        0     2      0   
+_PDC2                    UD_abs_xc8p9521_b 0xb        0     2      0   
+UD_abs_xc8p9521_c        UD_abs_xc8p9521_c 0xc        0     109    1   
+  length = 1
+  number of relocations = 0
+  number of line numbers = 0
+_PDC3bits                UD_abs_xc8p9521_c 0xc        0     2      0   
+_PDC3                    UD_abs_xc8p9521_c 0xc        0     2      0   
+UD_abs_xc8p9521_d        UD_abs_xc8p9521_d 0xd        0     109    1   
+  length = 1
+  number of relocations = 0
+  number of line numbers = 0
+_ICIECRbits              UD_abs_xc8p9521_d 0xd        0     2      0   
+_ICIECR                  UD_abs_xc8p9521_d 0xd        0     2      0   
+UD_abs_xc8p9521_e        UD_abs_xc8p9521_e 0xe        0     109    1   
+  length = 1
+  number of relocations = 0
+  number of line numbers = 0
+_CPUCONbits              UD_abs_xc8p9521_e 0xe        0     2      0   
+_CPUCON                  UD_abs_xc8p9521_e 0xe        0     2      0   
+UD_abs_xc8p9521_f        UD_abs_xc8p9521_f 0xf        0     109    1   
+  length = 1
+  number of relocations = 0
+  number of line numbers = 0
+_ISRbits                 UD_abs_xc8p9521_f 0xf        0     2      0   
+_ISR                     UD_abs_xc8p9521_f 0xf        0     2      0   
+code_xc8p9521            code_xc8p9521    0x28b      0     109    1   
+  length = 0
+  number of relocations = 0
+  number of line numbers = 0
+.eof                     DEBUG            0          0     107    0   
+_cinit                   .cinit           0x115      0     2      0   
+

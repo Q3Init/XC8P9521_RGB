@@ -1,0 +1,1397 @@
+slasm-0.13.6 beta               C:\Users\14440\Desktop\XJ\FUN\obj\XC8P9521-PWM-3.asm5-3-2024  20:23:27           PAGE  1
+
+
+               00001 ;--------------------------------------------------------
+               00002 ; File Created by SLCC : free open source ANSI-C Compiler
+               00003 ; Version 3.6.0 #Jan 29 2024 (MSVC)
+               00004 ;--------------------------------------------------------
+               00005 ; SL port for the RISC core
+               00006 ;--------------------------------------------------------
+               00007 ;       .file   "C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C"
+               00008         list    p=XC8P9521
+               00009         radix dec
+               00010         include "XC8P9521.inc"
+               00001         LIST                                                                  
+               00002 ; XC8P9521.INC  Standard Header File, Version 1.00
+               00083         LIST
+               00011 ;--------------------------------------------------------
+               00012 ; external declarations
+               00013 ;--------------------------------------------------------
+               00014         extern  _delayUs
+               00015         extern  _delayMs
+               00016         extern  _IARbits
+               00017         extern  _TCCbits
+               00018         extern  _PCLbits
+               00019         extern  _STATUSbits
+               00020         extern  _RSRbits
+               00021         extern  _PORT5bits
+               00022         extern  _PORT6bits
+               00023         extern  _LVDCONbits
+               00024         extern  _PWMCONbits
+               00025         extern  _PRDbits
+               00026         extern  _PDC1bits
+               00027         extern  _PDC2bits
+               00028         extern  _PDC3bits
+               00029         extern  _ICIECRbits
+               00030         extern  _CPUCONbits
+               00031         extern  _ISRbits
+               00032         extern  _IAR
+               00033         extern  _TCC
+               00034         extern  _PCL
+               00035         extern  _STATUS
+               00036         extern  _RSR
+               00037         extern  _PORT5
+               00038         extern  _PORT6
+               00039         extern  _LVDCON
+               00040         extern  _PWMCON
+               00041         extern  _PRD
+               00042         extern  _PDC1
+               00043         extern  _PDC2
+               00044         extern  _PDC3
+               00045         extern  _ICIECR
+               00046         extern  _CPUCON
+               00047         extern  _ISR
+               00048 ;--------------------------------------------------------
+               00049 ; global declarations
+               00050 ;--------------------------------------------------------
+               00051         global  _output_process
+               00052         global  _rgb_process
+               00053         global  _key_process
+               00054         global  _shake_process
+               00055         global  _beep_process
+               00056         global  _file_clrRam
+               00057         global  _file_init
+               00058         global  _file_project_init
+               00059         global  _int_isr
+               00060         global  _main
+               00061         global  _A_BUFF
+               00062         global  _R3_BUFF
+               00063         global  _beep_delay
+               00064         global  _sys_delay
+               00065         global  _beep_mode
+               00066         global  _beep_cnt
+               00067         global  _led_mode
+               00068         global  _led_switch
+               00069         global  _mode_switch
+               00070         global  _color_pwm_duty
+               00071         global  _once_pwm_duty
+               00072         global  _cir_mode
+               00073         global  _led_cnt
+               00074         global  _fun_dty
+               00075         global  _cold_dty
+               00076         global  _pwrkey_delay
+               00077         global  _ledkey_delay
+               00078         global  _r_delay
+               00079 
+               00080         global STK06
+               00081         global STK05
+               00082         global STK04
+               00083         global STK03
+               00084         global STK02
+               00085         global STK01
+               00086         global STK00
+               00087 
+               00088 sharebank udata_ovr 0x0020
+               00089 STK06   res 1
+               00090 STK05   res 1
+               00091 STK04   res 1
+               00092 STK03   res 1
+               00093 STK02   res 1
+               00094 STK01   res 1
+               00095 STK00   res 1
+               00096 
+               00097 ;--------------------------------------------------------
+               00098 ; global definitions
+               00099 ;--------------------------------------------------------
+               00100 ;--------------------------------------------------------
+               00101 ; absolute symbol definitions
+               00102 ;--------------------------------------------------------
+               00103 UD_abs_XC8P9521_PWM_3_10        udata_ovr       0x0010
+               00104 _A_BUFF
+               00105         res     1
+               00106 UD_abs_XC8P9521_PWM_3_11        udata_ovr       0x0011
+               00107 _R3_BUFF
+               00108         res     1
+               00109 ;--------------------------------------------------------
+               00110 ; compiler-defined variables
+               00111 ;--------------------------------------------------------
+               00112 UDL_XC8P9521_PWM_3_0    udata
+               00113 r0x1013 res     1
+               00114 r0x1014 res     1
+               00115 ;--------------------------------------------------------
+               00116 ; initialized data
+               00117 ;--------------------------------------------------------
+               00118 
+               00119 ID_XC8P9521_PWM_3_0     idata
+               00120 _beep_delay
+0000 3F82      00121         add 0x02,a
+               00122         db      0x00
+               00123 
+               00124 
+               00125 ID_XC8P9521_PWM_3_1     idata
+               00126 _sys_delay
+0000 3F82      00127         add 0x02,a
+               00128         db      0x00
+               00129 
+               00130 
+               00131 ID_XC8P9521_PWM_3_2     idata
+               00132 _beep_mode
+0000 3F82      00133         add 0x02,a
+               00134         db      0x00
+               00135 
+               00136 
+               00137 ID_XC8P9521_PWM_3_3     idata
+               00138 _beep_cnt
+0000 3F82      00139         add 0x02,a
+               00140         db      0x00
+               00141 
+               00142 
+               00143 ID_XC8P9521_PWM_3_4     idata
+               00144 _led_mode
+0000 3F82      00145         add 0x02,a
+               00146         db      0x01
+               00147 
+               00148 
+               00149 ID_XC8P9521_PWM_3_5     idata
+               00150 _led_switch
+0000 3F82      00151         add 0x02,a
+               00152         db      0x01
+               00153 
+               00154 
+               00155 ID_XC8P9521_PWM_3_6     idata
+               00156 _mode_switch
+0000 3F82      00157         add 0x02,a
+               00158         db      0x00
+               00159 
+               00160 
+               00161 ID_XC8P9521_PWM_3_7     idata
+               00162 _color_pwm_duty
+0000 3F82      00163         add 0x02,a
+               00164         db      0x00
+               00165 
+               00166 
+               00167 ID_XC8P9521_PWM_3_8     idata
+               00168 _once_pwm_duty
+0000 3F82      00169         add 0x02,a
+               00170         db      0x00
+               00171 
+               00172 
+               00173 ID_XC8P9521_PWM_3_9     idata
+               00174 _cir_mode
+0000 3F82      00175         add 0x02,a
+               00176         db      0x00
+               00177 
+               00178 
+               00179 ID_XC8P9521_PWM_3_10    idata
+               00180 _led_cnt
+0000 3F82      00181         add 0x02,a
+               00182         db      0x00
+               00183 
+               00184 
+               00185 ID_XC8P9521_PWM_3_11    idata
+               00186 _fun_dty
+0000 3F82      00187         add 0x02,a
+               00188         db      0x00
+               00189 
+               00190 
+               00191 ID_XC8P9521_PWM_3_12    idata
+               00192 _cold_dty
+0000 3F82      00193         add 0x02,a
+               00194         db      0x00
+               00195 
+               00196 
+               00197 ID_XC8P9521_PWM_3_13    idata
+               00198 _pwrkey_delay
+0000 3F82      00199         add 0x02,a
+               00200         db      0x00, 0x00
+               00201 
+               00202 
+               00203 ID_XC8P9521_PWM_3_14    idata
+               00204 _ledkey_delay
+0000 3F82      00205         add 0x02,a
+               00206         db      0x00, 0x00
+               00207 
+               00208 
+               00209 ID_XC8P9521_PWM_3_15    idata
+               00210 _r_delay
+0000 3F82      00211         add 0x02,a
+               00212         db      0x00, 0x00
+               00213 
+               00214 
+               00215 ;@Allocation info for local variables in function 'file_clrRam'
+               00216 ;@file_clrRam delayUs                   Allocated to registers ;size:2
+               00217 ;@file_clrRam delayMs                   Allocated to registers ;size:2
+               00218 ;@file_clrRam key_process               Allocated to registers ;size:2
+               00219 ;@file_clrRam rgb_process               Allocated to registers ;size:2
+               00220 ;@file_clrRam output_process            Allocated to registers ;size:2
+               00221 ;@file_clrRam beep_process              Allocated to registers ;size:2
+               00222 ;@file_clrRam shake_process             Allocated to registers ;size:2
+               00223 ;@file_clrRam file_clrRam               Allocated to registers ;size:2
+               00224 ;@file_clrRam IARbits                   Allocated to registers ;size:1
+               00225 ;@file_clrRam TCCbits                   Allocated to registers ;size:1
+               00226 ;@file_clrRam PCLbits                   Allocated to registers ;size:1
+               00227 ;@file_clrRam STATUSbits                Allocated to registers ;size:1
+               00228 ;@file_clrRam RSRbits                   Allocated to registers ;size:1
+               00229 ;@file_clrRam PORT5bits                 Allocated to registers ;size:1
+               00230 ;@file_clrRam PORT6bits                 Allocated to registers ;size:1
+               00231 ;@file_clrRam LVDCONbits                Allocated to registers ;size:1
+               00232 ;@file_clrRam PWMCONbits                Allocated to registers ;size:1
+               00233 ;@file_clrRam PRDbits                   Allocated to registers ;size:1
+               00234 ;@file_clrRam PDC1bits                  Allocated to registers ;size:1
+               00235 ;@file_clrRam PDC2bits                  Allocated to registers ;size:1
+               00236 ;@file_clrRam PDC3bits                  Allocated to registers ;size:1
+               00237 ;@file_clrRam ICIECRbits                Allocated to registers ;size:1
+               00238 ;@file_clrRam CPUCONbits                Allocated to registers ;size:1
+               00239 ;@file_clrRam ISRbits                   Allocated to registers ;size:1
+               00240 ;@file_clrRam A_BUFF                    Allocated to registers ;size:1
+               00241 ;@file_clrRam R3_BUFF                   Allocated to registers ;size:1
+               00242 ;@file_clrRam beep_delay                Allocated to registers ;size:1
+               00243 ;@file_clrRam sys_delay                 Allocated to registers ;size:1
+               00244 ;@file_clrRam beep_mode                 Allocated to registers ;size:1
+               00245 ;@file_clrRam beep_cnt                  Allocated to registers ;size:1
+               00246 ;@file_clrRam led_mode                  Allocated to registers ;size:1
+               00247 ;@file_clrRam led_switch                Allocated to registers ;size:1
+               00248 ;@file_clrRam mode_switch               Allocated to registers ;size:1
+               00249 ;@file_clrRam color_pwm_duty            Allocated to registers ;size:1
+               00250 ;@file_clrRam once_pwm_duty             Allocated to registers ;size:1
+               00251 ;@file_clrRam cir_mode                  Allocated to registers ;size:1
+               00252 ;@file_clrRam led_cnt                   Allocated to registers ;size:1
+               00253 ;@file_clrRam fun_dty                   Allocated to registers ;size:1
+               00254 ;@file_clrRam cold_dty                  Allocated to registers ;size:1
+               00255 ;@file_clrRam pwrkey_delay              Allocated to registers ;size:2
+               00256 ;@file_clrRam ledkey_delay              Allocated to registers ;size:2
+               00257 ;@file_clrRam r_delay                   Allocated to registers ;size:2
+               00258 ;@file_clrRam IAR                       Allocated to registers ;size:1
+               00259 ;@file_clrRam TCC                       Allocated to registers ;size:1
+               00260 ;@file_clrRam PCL                       Allocated to registers ;size:1
+               00261 ;@file_clrRam STATUS                    Allocated to registers ;size:1
+               00262 ;@file_clrRam RSR                       Allocated to registers ;size:1
+               00263 ;@file_clrRam PORT5                     Allocated to registers ;size:1
+               00264 ;@file_clrRam PORT6                     Allocated to registers ;size:1
+               00265 ;@file_clrRam LVDCON                    Allocated to registers ;size:1
+               00266 ;@file_clrRam PWMCON                    Allocated to registers ;size:1
+               00267 ;@file_clrRam PRD                       Allocated to registers ;size:1
+               00268 ;@file_clrRam PDC1                      Allocated to registers ;size:1
+               00269 ;@file_clrRam PDC2                      Allocated to registers ;size:1
+               00270 ;@file_clrRam PDC3                      Allocated to registers ;size:1
+               00271 ;@file_clrRam ICIECR                    Allocated to registers ;size:1
+               00272 ;@file_clrRam CPUCON                    Allocated to registers ;size:1
+               00273 ;@file_clrRam ISR                       Allocated to registers ;size:1
+               00274 ;@end Allocation info for local variables in function 'file_clrRam';
+               00275 
+               00276 ;--------------------------------------------------------
+               00277 ; overlayable items in internal ram 
+               00278 ;--------------------------------------------------------
+               00279 ;       udata_ovr
+               00280 ;--------------------------------------------------------
+               00281 ; reset vector 
+               00282 ;--------------------------------------------------------
+               00283 STARTUP code 0x0000
+0000 1000      00284         jmp     _main
+               00285 ;--------------------------------------------------------
+               00286 ; interrupt and initialization code
+               00287 ;--------------------------------------------------------
+               00288 c_interrupt     code    0x0003
+0003           00289 __sdcc_interrupt:
+               00290 ;***
+               00291 ;  pBlock Stats: dbName = I
+               00292 ;***
+               00293 ;; Starting pCode block
+0003           00294 _int_isr:       ;Function start
+               00295 ; 0 exit points
+               00296 ;       .line   125; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     __asm__("org 0x08");                    //中断入口地址                  
+               00297         org     0x08
+               00298 ;       .line   126; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     PUSH(_A_BUFF,_R3_BUFF);                 //中断入栈保护
+0008 3880      00299         mov     _A_BUFF,a
+0009 3680      00300         swap    _A_BUFF
+000A 3603      00301         swapa   STATUS
+000B 3880      00302         mov     _R3_BUFF,a
+               00303 ;       .line   128; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     if(TCIF)                                        //判断TCIF是否为1
+000C 2400      00304         JBTS    _ISRbits,0
+000D 1000      00305         JMP     _00121_DS_
+               00306 ;       .line   130; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     fun_dty++;
+000E 3280      00307         INC     _fun_dty
+               00308 ;       .line   131; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     cold_dty++;
+000F 3280      00309         INC     _cold_dty
+               00310 ;       .line   132; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     sys_delay++;
+0010 3280      00311         INC     _sys_delay
+               00312 ;       .line   133; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     TCC       += 6;                 //1/2 * 8 * (256-6) = 1000us    公式：1/IRC频率 * 预分频 * （256-初值）
+0011 0806      00313         MOV     A,@0x06
+0012 3F80      00314         ADD     _TCC,A
+               00315 ;       .line   134; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     ISR    = 0xfe;                          //清TC0中断标志位
+0013 08FE      00316         MOV     A,@0xfe
+0014 3880      00317         MOV     _ISR,A
+0015           00318 _00121_DS_:
+               00319 ;       .line   137; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     if(T1IF)                                        //判断T1IF是否为1,pwm周期中断
+0015 2580      00320         JBTS    _ISRbits,3
+0016 1000      00321         JMP     _00123_DS_
+               00322 ;       .line   139; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     ISR    = 0xf7;                          //ISR的bit3:T1IF清零
+0017 08F7      00323         MOV     A,@0xf7
+0018 3880      00324         MOV     _ISR,A
+0019           00325 _00123_DS_:
+               00326 ;       .line   142; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     POP(_A_BUFF,_R3_BUFF);                  //中断出栈保护恢复
+0019 3600      00327         swapa   _R3_BUFF
+001A 3883      00328         mov     STATUS,a
+001B 3600      00329         swapa   _A_BUFF
+               00330 ;       .line   143; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     }
+001C           00331 END_OF_INTERRUPT:
+001C 3823      00332         RETI    
+               00333 
+               00334 ;--------------------------------------------------------
+               00335 ; code
+               00336 ;--------------------------------------------------------
+               00337 code_XC8P9521_PWM_3     code
+               00338 ;***
+               00339 ;  pBlock Stats: dbName = M
+               00340 ;***
+               00341 ;has an exit
+               00342 ;functions called:
+               00343 ;   _file_clrRam
+               00344 ;   _file_init
+               00345 ;   _file_project_init
+               00346 ;   _key_process
+               00347 ;   _rgb_process
+               00348 ;   _shake_process
+               00349 ;   _beep_process
+               00350 ;   _output_process
+               00351 ;   _file_clrRam
+               00352 ;   _file_init
+               00353 ;   _file_project_init
+               00354 ;   _key_process
+               00355 ;   _rgb_process
+               00356 ;   _shake_process
+               00357 ;   _beep_process
+               00358 ;   _output_process
+               00359 ;2 compiler assigned registers:
+               00360 ;   r0x1014
+               00361 ;   r0x1015
+               00362 ;; Starting pCode block
+               00363 S_XC8P9521_PWM_3__main  code
+0000           00364 _main:  ;Function start
+               00365 ; 2 exit points
+               00366 ;       .line   427; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     file_clrRam();                                  //清RAM
+0000 1800      00367         CALL    _file_clrRam
+               00368 ;       .line   428; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     file_init();                                    //io寄存器初始化
+0001 1800      00369         CALL    _file_init
+               00370 ;       .line   429; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     file_project_init();                    //程序所需功能设置
+0002 1800      00371         CALL    _file_project_init
+               00372 ;       .line   430; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     EI();                                                   //打开总中断
+0003 3820      00373         ei      
+0004           00374 _00323_DS_:
+               00375 ;       .line   434; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     if( sys_delay >= 2 )
+0004 0802      00376         MOV     A,@0x02
+0005 3A00      00377         SUB     A,_sys_delay
+0006 2403      00378         JBTS    STATUS,0
+0007 1000      00379         JMP     _00323_DS_
+               00380 ;       .line   436; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     sys_delay = 0;
+0008 3980      00381         CLR     _sys_delay
+               00382 ;       .line   438; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     key_process( );
+0009 1800      00383         CALL    _key_process
+               00384 ;       .line   441; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     if( ( 0 == LIMIT_PORT( ) )&& ( mode_switch != NONE_GEARS ) )
+000A 2180      00385         JBTC    _PORT5bits,3
+000B 1000      00386         JMP     _00310_DS_
+000C 0800      00387         MOV     A,@0x00
+000D 3C00      00388         OR      A,_mode_switch
+000E 2103      00389         JBTC    STATUS,2
+000F 1000      00390         JMP     _00310_DS_
+               00391 ;       .line   443; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     FUN_PORT() = 0;
+0010 2B00      00392         BTC     _PORT6bits,6
+               00393 ;       .line   444; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     COLD_PORT() = 0;
+0011 2B80      00394         BTC     _PORT6bits,7
+               00395 ;       .line   445; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     G_PWMDTY = 0;
+0012 3980      00396         CLR     _PDC1
+               00397 ;       .line   446; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     B_PWMDTY = 0;
+0013 3980      00398         CLR     _PDC3
+               00399 ;       .line   447; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     if( ++r_delay < 500 )
+0014 3280      00400         INC     _r_delay
+0015 2103      00401         JBTC    STATUS,2
+0016 3280      00402         INC     (_r_delay + 1)
+0017 0801      00403         MOV     A,@0x01
+0018 3A00      00404         SUB     A,(_r_delay + 1)
+0019 2503      00405         JBTS    STATUS,2
+001A 1000      00406         JMP     _00361_DS_
+001B 08F4      00407         MOV     A,@0xf4
+001C 3A00      00408         SUB     A,_r_delay
+001D           00409 _00361_DS_:
+001D 2003      00410         JBTC    STATUS,0
+001E 1000      00411         JMP     _00307_DS_
+               00412 ;       .line   450; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     R_PWMDTY = 100;
+001F 0864      00413         MOV     A,@0x64
+0020 3880      00414         MOV     _PDC2,A
+0021 1000      00415         JMP     _00310_DS_
+               00416 ;;swapping arguments (AOP_TYPEs 1/3)
+0022           00417 _00307_DS_:
+               00418 ;       .line   452; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     else if(  r_delay > 500 )
+0022 0801      00419         MOV     A,@0x01
+0023 3A00      00420         SUB     A,(_r_delay + 1)
+0024 2503      00421         JBTS    STATUS,2
+0025 1000      00422         JMP     _00362_DS_
+0026 08F5      00423         MOV     A,@0xf5
+0027 3A00      00424         SUB     A,_r_delay
+0028           00425 _00362_DS_:
+0028 2403      00426         JBTS    STATUS,0
+0029 1000      00427         JMP     _00310_DS_
+               00428 ;       .line   455; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     R_PWMDTY = 0;
+002A 3980      00429         CLR     _PDC2
+               00430 ;       .line   456; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     if( r_delay >= 1000 )
+002B 0803      00431         MOV     A,@0x03
+002C 3A00      00432         SUB     A,(_r_delay + 1)
+002D 2503      00433         JBTS    STATUS,2
+002E 1000      00434         JMP     _00363_DS_
+002F 08E8      00435         MOV     A,@0xe8
+0030 3A00      00436         SUB     A,_r_delay
+0031           00437 _00363_DS_:
+0031 2403      00438         JBTS    STATUS,0
+0032 1000      00439         JMP     _00310_DS_
+               00440 ;       .line   458; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     r_delay = 0;
+0033 3980      00441         CLR     _r_delay
+0034 3980      00442         CLR     (_r_delay + 1)
+0035           00443 _00310_DS_:
+               00444 ;       .line   462; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     if( ( 1 == LIMIT_PORT( ) )&& ( mode_switch != NONE_GEARS ) )
+0035 3980      00445         CLR     r0x1014
+0036 2180      00446         JBTC    _PORT5bits,3
+0037 3280      00447         INC     r0x1014
+               00448 ;;101   MOV     A,r0x1014
+               00449 ;;99    MOV     r0x1015,A
+               00450 ;;100   MOV     A,r0x1015
+0038 3000      00451         MOV     A,r0x1014
+0039 0E01      00452         XOR     A,@0x01
+003A 2503      00453         JBTS    STATUS,2
+003B 1000      00454         JMP     _00323_DS_
+003C 0800      00455         MOV     A,@0x00
+003D 3C00      00456         OR      A,_mode_switch
+003E 2103      00457         JBTC    STATUS,2
+003F 1000      00458         JMP     _00323_DS_
+               00459 ;       .line   466; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     if( 0 == led_switch )
+0040 0800      00460         MOV     A,@0x00
+0041 3C00      00461         OR      A,_led_switch
+0042 2503      00462         JBTS    STATUS,2
+0043 1000      00463         JMP     _00315_DS_
+               00464 ;       .line   469; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     R_PWMDTY = 0;
+0044 3980      00465         CLR     _PDC2
+               00466 ;       .line   470; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     G_PWMDTY = 0;
+0045 3980      00467         CLR     _PDC1
+               00468 ;       .line   471; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     B_PWMDTY = 0;
+0046 3980      00469         CLR     _PDC3
+0047 1000      00470         JMP     _00316_DS_
+0048           00471 _00315_DS_:
+               00472 ;       .line   473; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     else if( 1 == led_switch )
+0048 3000      00473         MOV     A,_led_switch
+0049 0E01      00474         XOR     A,@0x01
+004A 2503      00475         JBTS    STATUS,2
+004B 1000      00476         JMP     _00316_DS_
+               00477 ;       .line   476; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     rgb_process( );
+004C 1800      00478         CALL    _rgb_process
+004D           00479 _00316_DS_:
+               00480 ;       .line   479; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     shake_process( );
+004D 1800      00481         CALL    _shake_process
+               00482 ;       .line   481; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     beep_process( );
+004E 1800      00483         CALL    _beep_process
+               00484 ;       .line   483; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     output_process( );
+004F 1800      00485         CALL    _output_process
+0050 1000      00486         JMP     _00323_DS_
+               00487 ;       .line   487; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     }
+0051 3822      00488         RET     
+               00489 ; exit point of _main
+               00490 
+               00491 ;***
+               00492 ;  pBlock Stats: dbName = C
+               00493 ;***
+               00494 ;has an exit
+               00495 ;; Starting pCode block
+               00496 S_XC8P9521_PWM_3__output_process        code
+0000           00497 _output_process:        ;Function start
+               00498 ; 2 exit points
+               00499 ;;swapping arguments (AOP_TYPEs 1/3)
+               00500 ;       .line   365; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     switch( mode_switch )
+0000 0803      00501         MOV     A,@0x03
+0001 3A00      00502         SUB     A,_mode_switch
+0002 2003      00503         JBTC    STATUS,0
+0003 1000      00504         JMP     _00297_DS_
+0004 3000      00505         MOV     A,_mode_switch
+0005           00506         BANKSEL PCL
+0005 3F82      00507         ADD     PCL,A
+0006 1000      00508         JMP     _00270_DS_
+0007 1000      00509         JMP     _00271_DS_
+0008 1000      00510         JMP     _00286_DS_
+0009           00511 _00270_DS_:
+               00512 ;       .line   369; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     FUN_PORT( ) = 0;
+0009 2B00      00513         BTC     _PORT6bits,6
+               00514 ;       .line   370; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     COLD_PORT( ) = 0;
+000A 2B80      00515         BTC     _PORT6bits,7
+               00516 ;       .line   371; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     break;
+000B 1000      00517         JMP     _00297_DS_
+000C           00518 _00271_DS_:
+               00519 ;       .line   373; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     if( fun_dty < 6 )
+000C 0806      00520         MOV     A,@0x06
+000D 3A00      00521         SUB     A,_fun_dty
+000E 2003      00522         JBTC    STATUS,0
+000F 1000      00523         JMP     _00277_DS_
+               00524 ;       .line   375; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     FUN_PORT( ) = 1;        
+0010 2F00      00525         BTS     _PORT6bits,6
+0011 1000      00526         JMP     _00278_DS_
+0012           00527 _00277_DS_:
+               00528 ;       .line   377; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     else if( fun_dty >= 6 )
+0012 0806      00529         MOV     A,@0x06
+0013 3A00      00530         SUB     A,_fun_dty
+0014 2403      00531         JBTS    STATUS,0
+0015 1000      00532         JMP     _00278_DS_
+               00533 ;       .line   379; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     FUN_PORT( ) = 0;        
+0016 2B00      00534         BTC     _PORT6bits,6
+               00535 ;       .line   380; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     if( fun_dty >= 10 )
+0017 080A      00536         MOV     A,@0x0a
+0018 3A00      00537         SUB     A,_fun_dty
+0019 2403      00538         JBTS    STATUS,0
+001A 1000      00539         JMP     _00278_DS_
+               00540 ;       .line   382; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     fun_dty = 0;
+001B 3980      00541         CLR     _fun_dty
+001C           00542 _00278_DS_:
+               00543 ;       .line   385; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     if( cold_dty < 9 )
+001C 0809      00544         MOV     A,@0x09
+001D 3A00      00545         SUB     A,_cold_dty
+001E 2003      00546         JBTC    STATUS,0
+001F 1000      00547         JMP     _00284_DS_
+               00548 ;       .line   387; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     COLD_PORT( ) = 1;       
+0020 2F80      00549         BTS     _PORT6bits,7
+0021 1000      00550         JMP     _00297_DS_
+0022           00551 _00284_DS_:
+               00552 ;       .line   389; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     else if( cold_dty >= 9 )
+0022 0809      00553         MOV     A,@0x09
+0023 3A00      00554         SUB     A,_cold_dty
+0024 2403      00555         JBTS    STATUS,0
+0025 1000      00556         JMP     _00297_DS_
+               00557 ;       .line   391; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     COLD_PORT( ) = 0;       
+0026 2B80      00558         BTC     _PORT6bits,7
+               00559 ;       .line   392; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     if( cold_dty >= 10 )
+0027 080A      00560         MOV     A,@0x0a
+0028 3A00      00561         SUB     A,_cold_dty
+0029 2403      00562         JBTS    STATUS,0
+002A 1000      00563         JMP     _00297_DS_
+               00564 ;       .line   394; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     cold_dty = 0;
+002B 3980      00565         CLR     _cold_dty
+               00566 ;       .line   398; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     break;
+002C 1000      00567         JMP     _00297_DS_
+002D           00568 _00286_DS_:
+               00569 ;       .line   402; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     if( fun_dty < 8 )
+002D 0808      00570         MOV     A,@0x08
+002E 3A00      00571         SUB     A,_fun_dty
+002F 2003      00572         JBTC    STATUS,0
+0030 1000      00573         JMP     _00292_DS_
+               00574 ;       .line   404; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     FUN_PORT() = 1; 
+0031 2F00      00575         BTS     _PORT6bits,6
+0032 1000      00576         JMP     _00293_DS_
+0033           00577 _00292_DS_:
+               00578 ;       .line   406; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     else if( fun_dty >= 8 )
+0033 0808      00579         MOV     A,@0x08
+0034 3A00      00580         SUB     A,_fun_dty
+0035 2403      00581         JBTS    STATUS,0
+0036 1000      00582         JMP     _00293_DS_
+               00583 ;       .line   408; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     FUN_PORT() = 0; 
+0037 2B00      00584         BTC     _PORT6bits,6
+               00585 ;       .line   409; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     if( fun_dty >= 10 )
+0038 080A      00586         MOV     A,@0x0a
+0039 3A00      00587         SUB     A,_fun_dty
+003A 2403      00588         JBTS    STATUS,0
+003B 1000      00589         JMP     _00293_DS_
+               00590 ;       .line   411; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     fun_dty = 0;
+003C 3980      00591         CLR     _fun_dty
+003D           00592 _00293_DS_:
+               00593 ;       .line   414; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     COLD_PORT( ) = 1;
+003D 2F80      00594         BTS     _PORT6bits,7
+               00595 ;       .line   415; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     if( cold_dty >= 10 )
+003E 080A      00596         MOV     A,@0x0a
+003F 3A00      00597         SUB     A,_cold_dty
+0040 2403      00598         JBTS    STATUS,0
+0041 1000      00599         JMP     _00297_DS_
+               00600 ;       .line   417; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     cold_dty = 0;
+0042 3980      00601         CLR     _cold_dty
+               00602 ;       .line   421; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     }
+0043           00603 _00297_DS_:
+               00604 ;       .line   420; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     }
+0043 3822      00605         RET     
+               00606 ; exit point of _output_process
+               00607 
+               00608 ;***
+               00609 ;  pBlock Stats: dbName = C
+               00610 ;***
+               00611 ;has an exit
+               00612 ;1 compiler assigned register :
+               00613 ;   r0x1013
+               00614 ;; Starting pCode block
+               00615 S_XC8P9521_PWM_3__rgb_process   code
+0000           00616 _rgb_process:   ;Function start
+               00617 ; 2 exit points
+               00618 ;       .line   287; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     if( led_cnt == 20 )
+0000 3000      00619         MOV     A,_led_cnt
+0001 0E14      00620         XOR     A,@0x14
+0002 2503      00621         JBTS    STATUS,2
+0003 1000      00622         JMP     _00242_DS_
+               00623 ;       .line   289; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     led_cnt = 0;
+0004 3980      00624         CLR     _led_cnt
+               00625 ;       .line   290; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     cir_mode = !cir_mode;
+0005 3000      00626         MOV     A,_cir_mode
+0006 0800      00627         MOV     A,@0x00
+0007 2103      00628         JBTC    STATUS,2
+0008 0801      00629         MOV     A,@0x01
+0009 3880      00630         MOV     r0x1013,A
+000A 3000      00631         MOV     A,r0x1013
+000B 3880      00632         MOV     _cir_mode,A
+000C           00633 _00242_DS_:
+               00634 ;       .line   292; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     switch( led_switch )
+000C 0801      00635         MOV     A,@0x01
+000D 3A00      00636         SUB     A,_led_switch
+000E 2403      00637         JBTS    STATUS,0
+000F 1000      00638         JMP     _00265_DS_
+               00639 ;;swapping arguments (AOP_TYPEs 1/3)
+0010 0804      00640         MOV     A,@0x04
+0011 3A00      00641         SUB     A,_led_switch
+0012 2003      00642         JBTC    STATUS,0
+0013 1000      00643         JMP     _00265_DS_
+0014 3B00      00644         DECA    _led_switch
+0015 3880      00645         MOV     r0x1013,A
+0016 3000      00646         MOV     A,r0x1013
+0017           00647         BANKSEL PCL
+0017 3F82      00648         ADD     PCL,A
+0018 1000      00649         JMP     _00243_DS_
+0019 1000      00650         JMP     _00249_DS_
+001A 1000      00651         JMP     _00259_DS_
+001B           00652 _00243_DS_:
+               00653 ;       .line   296; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     if( CIR_FADEIN == cir_mode )
+001B 3000      00654         MOV     A,_cir_mode
+001C 0E01      00655         XOR     A,@0x01
+001D 2503      00656         JBTS    STATUS,2
+001E 1000      00657         JMP     _00247_DS_
+               00658 ;       .line   298; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     color_pwm_duty += 5;
+001F 0805      00659         MOV     A,@0x05
+0020 3F80      00660         ADD     _color_pwm_duty,A
+0021 1000      00661         JMP     _00248_DS_
+0022           00662 _00247_DS_:
+               00663 ;       .line   300; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     else if( CIR_DIEOUT == cir_mode )
+0022 0800      00664         MOV     A,@0x00
+0023 3C00      00665         OR      A,_cir_mode
+0024 2503      00666         JBTS    STATUS,2
+0025 1000      00667         JMP     _00248_DS_
+               00668 ;       .line   302; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     color_pwm_duty -= 5;
+0026 08FB      00669         MOV     A,@0xfb
+0027 3F80      00670         ADD     _color_pwm_duty,A
+0028           00671 _00248_DS_:
+               00672 ;       .line   304; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     led_cnt++;
+0028 3280      00673         INC     _led_cnt
+               00674 ;       .line   305; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     R_PWMDTY = color_pwm_duty;
+0029 3000      00675         MOV     A,_color_pwm_duty
+002A 3880      00676         MOV     _PDC2,A
+               00677 ;       .line   306; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     G_PWMDTY = color_pwm_duty;                      
+002B 3000      00678         MOV     A,_color_pwm_duty
+002C 3880      00679         MOV     _PDC1,A
+               00680 ;       .line   307; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     B_PWMDTY = color_pwm_duty;
+002D 3000      00681         MOV     A,_color_pwm_duty
+002E 3880      00682         MOV     _PDC3,A
+               00683 ;       .line   308; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     break;
+002F 1000      00684         JMP     _00265_DS_
+0030           00685 _00249_DS_:
+               00686 ;       .line   312; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     if( 1 == cir_mode )
+0030 3000      00687         MOV     A,_cir_mode
+0031 0E01      00688         XOR     A,@0x01
+0032 2503      00689         JBTS    STATUS,2
+0033 1000      00690         JMP     _00253_DS_
+               00691 ;       .line   314; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     once_pwm_duty += 5;
+0034 0805      00692         MOV     A,@0x05
+0035 3F80      00693         ADD     _once_pwm_duty,A
+0036 1000      00694         JMP     _00254_DS_
+0037           00695 _00253_DS_:
+               00696 ;       .line   316; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     else if( 0 == cir_mode )
+0037 0800      00697         MOV     A,@0x00
+0038 3C00      00698         OR      A,_cir_mode
+0039 2503      00699         JBTS    STATUS,2
+003A 1000      00700         JMP     _00254_DS_
+               00701 ;       .line   318; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     once_pwm_duty -= 5;
+003B 08FB      00702         MOV     A,@0xfb
+003C 3F80      00703         ADD     _once_pwm_duty,A
+003D           00704 _00254_DS_:
+               00705 ;       .line   320; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     led_cnt++;
+003D 3280      00706         INC     _led_cnt
+               00707 ;;swapping arguments (AOP_TYPEs 1/3)
+               00708 ;       .line   321; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     switch( led_mode )
+003E 0803      00709         MOV     A,@0x03
+003F 3A00      00710         SUB     A,_led_mode
+0040 2003      00711         JBTC    STATUS,0
+0041 1000      00712         JMP     _00265_DS_
+0042 3000      00713         MOV     A,_led_mode
+0043           00714         BANKSEL PCL
+0043 3F82      00715         ADD     PCL,A
+0044 1000      00716         JMP     _00255_DS_
+0045 1000      00717         JMP     _00256_DS_
+0046 1000      00718         JMP     _00257_DS_
+0047           00719 _00255_DS_:
+               00720 ;       .line   324; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     R_PWMDTY = once_pwm_duty;
+0047 3000      00721         MOV     A,_once_pwm_duty
+0048 3880      00722         MOV     _PDC2,A
+               00723 ;       .line   325; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     G_PWMDTY = 0;
+0049 3980      00724         CLR     _PDC1
+               00725 ;       .line   326; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     B_PWMDTY = 0;
+004A 3980      00726         CLR     _PDC3
+               00727 ;       .line   327; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     break;
+004B 1000      00728         JMP     _00265_DS_
+004C           00729 _00256_DS_:
+               00730 ;       .line   329; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     R_PWMDTY = 0;
+004C 3980      00731         CLR     _PDC2
+               00732 ;       .line   330; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     G_PWMDTY = once_pwm_duty;
+004D 3000      00733         MOV     A,_once_pwm_duty
+004E 3880      00734         MOV     _PDC1,A
+               00735 ;       .line   331; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     B_PWMDTY = 0;
+004F 3980      00736         CLR     _PDC3
+               00737 ;       .line   332; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     break;
+0050 1000      00738         JMP     _00265_DS_
+0051           00739 _00257_DS_:
+               00740 ;       .line   334; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     R_PWMDTY = 0;
+0051 3980      00741         CLR     _PDC2
+               00742 ;       .line   335; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     G_PWMDTY = 0;
+0052 3980      00743         CLR     _PDC1
+               00744 ;       .line   336; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     B_PWMDTY = once_pwm_duty;
+0053 3000      00745         MOV     A,_once_pwm_duty
+0054 3880      00746         MOV     _PDC3,A
+               00747 ;       .line   339; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     break;
+0055 1000      00748         JMP     _00265_DS_
+0056           00749 _00259_DS_:
+               00750 ;       .line   342; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     R_PWMDTY = 0;
+0056 3980      00751         CLR     _PDC2
+               00752 ;       .line   343; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     G_PWMDTY = 0;                   
+0057 3980      00753         CLR     _PDC1
+               00754 ;       .line   344; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     B_PWMDTY = 0;
+0058 3980      00755         CLR     _PDC3
+               00756 ;       .line   345; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     once_pwm_duty = 100;
+0059 0864      00757         MOV     A,@0x64
+005A 3880      00758         MOV     _once_pwm_duty,A
+               00759 ;;swapping arguments (AOP_TYPEs 1/3)
+               00760 ;       .line   346; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     switch( led_mode )
+005B 0803      00761         MOV     A,@0x03
+005C 3A00      00762         SUB     A,_led_mode
+005D 2003      00763         JBTC    STATUS,0
+005E 1000      00764         JMP     _00265_DS_
+005F 3000      00765         MOV     A,_led_mode
+0060           00766         BANKSEL PCL
+0060 3F82      00767         ADD     PCL,A
+0061 1000      00768         JMP     _00260_DS_
+0062 1000      00769         JMP     _00261_DS_
+0063 1000      00770         JMP     _00262_DS_
+0064           00771 _00260_DS_:
+               00772 ;       .line   349; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     R_PWMDTY = once_pwm_duty;
+0064 0864      00773         MOV     A,@0x64
+0065 3880      00774         MOV     _PDC2,A
+               00775 ;       .line   350; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     break;
+0066 1000      00776         JMP     _00265_DS_
+0067           00777 _00261_DS_:
+               00778 ;       .line   352; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     G_PWMDTY = once_pwm_duty;
+0067 0864      00779         MOV     A,@0x64
+0068 3880      00780         MOV     _PDC1,A
+               00781 ;       .line   353; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     break;
+0069 1000      00782         JMP     _00265_DS_
+006A           00783 _00262_DS_:
+               00784 ;       .line   355; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     B_PWMDTY = once_pwm_duty;
+006A 0864      00785         MOV     A,@0x64
+006B 3880      00786         MOV     _PDC3,A
+               00787 ;       .line   360; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     }
+006C           00788 _00265_DS_:
+               00789 ;       .line   359; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     }       
+006C 3822      00790         RET     
+               00791 ; exit point of _rgb_process
+               00792 
+               00793 ;***
+               00794 ;  pBlock Stats: dbName = C
+               00795 ;***
+               00796 ;has an exit
+               00797 ;1 compiler assigned register :
+               00798 ;   r0x1013
+               00799 ;; Starting pCode block
+               00800 S_XC8P9521_PWM_3__key_process   code
+0000           00801 _key_process:   ;Function start
+               00802 ; 2 exit points
+               00803 ;       .line   196; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     if( 0 == PWRKY_PORT( ) )
+0000 2100      00804         JBTC    _PORT5bits,2
+0001 1000      00805         JMP     _00168_DS_
+               00806 ;       .line   198; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     pwrkey_delay++;
+0002 3280      00807         INC     _pwrkey_delay
+0003 2103      00808         JBTC    STATUS,2
+0004 3280      00809         INC     (_pwrkey_delay + 1)
+0005 1000      00810         JMP     _00169_DS_
+0006           00811 _00168_DS_:
+               00812 ;       .line   203; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     if( pwrkey_delay >= 2 )
+0006 0800      00813         MOV     A,@0x00
+0007 3A00      00814         SUB     A,(_pwrkey_delay + 1)
+0008 2503      00815         JBTS    STATUS,2
+0009 1000      00816         JMP     _00226_DS_
+000A 0802      00817         MOV     A,@0x02
+000B 3A00      00818         SUB     A,_pwrkey_delay
+000C           00819 _00226_DS_:
+000C 2403      00820         JBTS    STATUS,0
+000D 1000      00821         JMP     _00166_DS_
+               00822 ;       .line   206; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     if( pwrkey_delay < 800 )
+000E 0803      00823         MOV     A,@0x03
+000F 3A00      00824         SUB     A,(_pwrkey_delay + 1)
+0010 2503      00825         JBTS    STATUS,2
+0011 1000      00826         JMP     _00227_DS_
+0012 0820      00827         MOV     A,@0x20
+0013 3A00      00828         SUB     A,_pwrkey_delay
+0014           00829 _00227_DS_:
+0014 2003      00830         JBTC    STATUS,0
+0015 1000      00831         JMP     _00163_DS_
+               00832 ;;swapping arguments (AOP_TYPEs 1/3)
+               00833 ;       .line   208; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     switch( mode_switch )
+0016 0803      00834         MOV     A,@0x03
+0017 3A00      00835         SUB     A,_mode_switch
+0018 2003      00836         JBTC    STATUS,0
+0019 1000      00837         JMP     _00166_DS_
+001A 3000      00838         MOV     A,_mode_switch
+001B           00839         BANKSEL PCL
+001B 3F82      00840         ADD     PCL,A
+001C 1000      00841         JMP     _00155_DS_
+001D 1000      00842         JMP     _00156_DS_
+001E 1000      00843         JMP     _00157_DS_
+001F           00844 _00155_DS_:
+               00845 ;       .line   212; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     mode_switch = TWO_GEARS;
+001F 0802      00846         MOV     A,@0x02
+0020 3880      00847         MOV     _mode_switch,A
+               00848 ;       .line   213; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     beep_mode = BEEP_ONE;
+0021 0801      00849         MOV     A,@0x01
+0022 3880      00850         MOV     _beep_mode,A
+               00851 ;       .line   214; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     beep_delay = 0;
+0023 3980      00852         CLR     _beep_delay
+               00853 ;       .line   215; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     beep_cnt = 1;
+0024 0801      00854         MOV     A,@0x01
+0025 3880      00855         MOV     _beep_cnt,A
+               00856 ;       .line   216; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     break;
+0026 1000      00857         JMP     _00166_DS_
+0027           00858 _00156_DS_:
+               00859 ;       .line   219; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     beep_mode = BEEP_ONE;
+0027 0801      00860         MOV     A,@0x01
+0028 3880      00861         MOV     _beep_mode,A
+               00862 ;       .line   220; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     beep_delay = 0;
+0029 3980      00863         CLR     _beep_delay
+               00864 ;       .line   221; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     beep_cnt = 1;
+002A 0801      00865         MOV     A,@0x01
+002B 3880      00866         MOV     _beep_cnt,A
+               00867 ;       .line   222; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     mode_switch = TWO_GEARS;
+002C 0802      00868         MOV     A,@0x02
+002D 3880      00869         MOV     _mode_switch,A
+               00870 ;       .line   223; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     break; 
+002E 1000      00871         JMP     _00166_DS_
+002F           00872 _00157_DS_:
+               00873 ;       .line   226; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     beep_mode = BEEP_TWO; 
+002F 0802      00874         MOV     A,@0x02
+0030 3880      00875         MOV     _beep_mode,A
+               00876 ;       .line   227; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     beep_delay = 0;
+0031 3980      00877         CLR     _beep_delay
+               00878 ;       .line   228; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     beep_cnt = 2;
+0032 0802      00879         MOV     A,@0x02
+0033 3880      00880         MOV     _beep_cnt,A
+               00881 ;       .line   229; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     mode_switch = ONE_GEARS;
+0034 0801      00882         MOV     A,@0x01
+0035 3880      00883         MOV     _mode_switch,A
+               00884 ;       .line   231; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     }
+0036 1000      00885         JMP     _00166_DS_
+0037           00886 _00163_DS_:
+               00887 ;       .line   234; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     else if( ( pwrkey_delay >= 800 ) && ( mode_switch != NONE_GEARS ) )
+0037 0803      00888         MOV     A,@0x03
+0038 3A00      00889         SUB     A,(_pwrkey_delay + 1)
+0039 2503      00890         JBTS    STATUS,2
+003A 1000      00891         JMP     _00230_DS_
+003B 0820      00892         MOV     A,@0x20
+003C 3A00      00893         SUB     A,_pwrkey_delay
+003D           00894 _00230_DS_:
+003D 2403      00895         JBTS    STATUS,0
+003E 1000      00896         JMP     _00166_DS_
+003F 0800      00897         MOV     A,@0x00
+0040 3C00      00898         OR      A,_mode_switch
+0041 2103      00899         JBTC    STATUS,2
+0042 1000      00900         JMP     _00166_DS_
+               00901 ;       .line   237; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     mode_switch = NONE_GEARS;
+0043 3980      00902         CLR     _mode_switch
+               00903 ;       .line   238; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     beep_mode = BEEP_ONE;
+0044 0801      00904         MOV     A,@0x01
+0045 3880      00905         MOV     _beep_mode,A
+               00906 ;       .line   239; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     beep_delay = 0;
+0046 3980      00907         CLR     _beep_delay
+               00908 ;       .line   240; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     beep_cnt = 1;
+0047 0801      00909         MOV     A,@0x01
+0048 3880      00910         MOV     _beep_cnt,A
+0049           00911 _00166_DS_:
+               00912 ;       .line   243; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     pwrkey_delay = 0;
+0049 3980      00913         CLR     _pwrkey_delay
+004A 3980      00914         CLR     (_pwrkey_delay + 1)
+004B           00915 _00169_DS_:
+               00916 ;       .line   247; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     if( 0 == LEDKEY_PORT( ) && ( mode_switch != NONE_GEARS )  )
+004B 2080      00917         JBTC    _PORT5bits,1
+004C 1000      00918         JMP     _00182_DS_
+004D 0800      00919         MOV     A,@0x00
+004E 3C00      00920         OR      A,_mode_switch
+004F 2103      00921         JBTC    STATUS,2
+0050 1000      00922         JMP     _00182_DS_
+               00923 ;       .line   249; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     ledkey_delay++;
+0051 3280      00924         INC     _ledkey_delay
+0052 2103      00925         JBTC    STATUS,2
+0053 3280      00926         INC     (_ledkey_delay + 1)
+0054 1000      00927         JMP     _00185_DS_
+0055           00928 _00182_DS_:
+               00929 ;       .line   254; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     if( ledkey_delay >= 2 )
+0055 0800      00930         MOV     A,@0x00
+0056 3A00      00931         SUB     A,(_ledkey_delay + 1)
+0057 2503      00932         JBTS    STATUS,2
+0058 1000      00933         JMP     _00231_DS_
+0059 0802      00934         MOV     A,@0x02
+005A 3A00      00935         SUB     A,_ledkey_delay
+005B           00936 _00231_DS_:
+005B 2403      00937         JBTS    STATUS,0
+005C 1000      00938         JMP     _00180_DS_
+               00939 ;       .line   257; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     if( ledkey_delay < 800 )
+005D 0803      00940         MOV     A,@0x03
+005E 3A00      00941         SUB     A,(_ledkey_delay + 1)
+005F 2503      00942         JBTS    STATUS,2
+0060 1000      00943         JMP     _00232_DS_
+0061 0820      00944         MOV     A,@0x20
+0062 3A00      00945         SUB     A,_ledkey_delay
+0063           00946 _00232_DS_:
+0063 2003      00947         JBTC    STATUS,0
+0064 1000      00948         JMP     _00177_DS_
+               00949 ;       .line   259; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     led_switch = 1;
+0065 0801      00950         MOV     A,@0x01
+0066 3880      00951         MOV     _led_switch,A
+               00952 ;       .line   260; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     switch( led_mode )
+0067 0801      00953         MOV     A,@0x01
+0068 3A00      00954         SUB     A,_led_mode
+0069 2403      00955         JBTS    STATUS,0
+006A 1000      00956         JMP     _00180_DS_
+               00957 ;;swapping arguments (AOP_TYPEs 1/3)
+006B 0804      00958         MOV     A,@0x04
+006C 3A00      00959         SUB     A,_led_mode
+006D 2003      00960         JBTC    STATUS,0
+006E 1000      00961         JMP     _00180_DS_
+006F 3B00      00962         DECA    _led_mode
+0070 3880      00963         MOV     r0x1013,A
+0071 3000      00964         MOV     A,r0x1013
+0072           00965         BANKSEL PCL
+0072 3F82      00966         ADD     PCL,A
+0073 1000      00967         JMP     _00170_DS_
+0074 1000      00968         JMP     _00171_DS_
+0075 1000      00969         JMP     _00172_DS_
+0076           00970 _00170_DS_:
+               00971 ;       .line   263; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     led_mode = RGB_ONE_CIR;
+0076 0802      00972         MOV     A,@0x02
+0077 3880      00973         MOV     _led_mode,A
+               00974 ;       .line   264; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     break;
+0078 1000      00975         JMP     _00180_DS_
+0079           00976 _00171_DS_:
+               00977 ;       .line   266; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     led_mode = RGB_ONE_ONCE;
+0079 0803      00978         MOV     A,@0x03
+007A 3880      00979         MOV     _led_mode,A
+               00980 ;       .line   267; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     break;
+007B 1000      00981         JMP     _00180_DS_
+007C           00982 _00172_DS_:
+               00983 ;       .line   269; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     led_mode = RGB_COLOR_CIR;
+007C 0801      00984         MOV     A,@0x01
+007D 3880      00985         MOV     _led_mode,A
+               00986 ;       .line   271; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     }
+007E 1000      00987         JMP     _00180_DS_
+007F           00988 _00177_DS_:
+               00989 ;       .line   274; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     else if( ledkey_delay >= 800 )
+007F 0803      00990         MOV     A,@0x03
+0080 3A00      00991         SUB     A,(_ledkey_delay + 1)
+0081 2503      00992         JBTS    STATUS,2
+0082 1000      00993         JMP     _00236_DS_
+0083 0820      00994         MOV     A,@0x20
+0084 3A00      00995         SUB     A,_ledkey_delay
+0085           00996 _00236_DS_:
+0085 2403      00997         JBTS    STATUS,0
+0086 1000      00998         JMP     _00180_DS_
+               00999 ;       .line   276; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     led_mode = RGB_ONE_NONE;
+0087 3980      01000         CLR     _led_mode
+0088           01001 _00180_DS_:
+               01002 ;       .line   279; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     ledkey_delay = 0;
+0088 3980      01003         CLR     _ledkey_delay
+0089 3980      01004         CLR     (_ledkey_delay + 1)
+               01005 ;       .line   281; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     }
+008A           01006 _00185_DS_:
+008A 3822      01007         RET     
+               01008 ; exit point of _key_process
+               01009 
+               01010 ;***
+               01011 ;  pBlock Stats: dbName = C
+               01012 ;***
+               01013 ;has an exit
+               01014 ;1 compiler assigned register :
+               01015 ;   r0x1013
+               01016 ;; Starting pCode block
+               01017 S_XC8P9521_PWM_3__shake_process code
+0000           01018 _shake_process: ;Function start
+               01019 ; 2 exit points
+               01020 ;       .line   187; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     if( 0 ==  SHAKE_PORT( ) )
+0000 2000      01021         JBTC    _PORT5bits,0
+0001 1000      01022         JMP     _00150_DS_
+               01023 ;       .line   189; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     led_switch = !led_switch;
+0002 3000      01024         MOV     A,_led_switch
+0003 0800      01025         MOV     A,@0x00
+0004 2103      01026         JBTC    STATUS,2
+0005 0801      01027         MOV     A,@0x01
+0006 3880      01028         MOV     r0x1013,A
+0007 3000      01029         MOV     A,r0x1013
+0008 3880      01030         MOV     _led_switch,A
+               01031 ;       .line   191; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     }
+0009           01032 _00150_DS_:
+0009 3822      01033         RET     
+               01034 ; exit point of _shake_process
+               01035 
+               01036 ;***
+               01037 ;  pBlock Stats: dbName = C
+               01038 ;***
+               01039 ;has an exit
+               01040 ;1 compiler assigned register :
+               01041 ;   r0x1013
+               01042 ;; Starting pCode block
+               01043 S_XC8P9521_PWM_3__beep_process  code
+0000           01044 _beep_process:  ;Function start
+               01045 ; 2 exit points
+               01046 ;;swapping arguments (AOP_TYPEs 1/3)
+               01047 ;       .line   148; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     switch( beep_mode )
+0000 0803      01048         MOV     A,@0x03
+0001 3A00      01049         SUB     A,_beep_mode
+0002 2003      01050         JBTC    STATUS,0
+0003 1000      01051         JMP     _00143_DS_
+0004 3000      01052         MOV     A,_beep_mode
+0005           01053         BANKSEL PCL
+0005 3F82      01054         ADD     PCL,A
+0006 1000      01055         JMP     _00128_DS_
+0007 1000      01056         JMP     _00129_DS_
+0008 1000      01057         JMP     _00134_DS_
+0009           01058 _00128_DS_:
+               01059 ;       .line   151; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     BEEP_PORT( ) = 0;
+0009 2A80      01060         BTC     _PORT6bits,5
+               01061 ;       .line   152; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     break;  
+000A 1000      01062         JMP     _00143_DS_
+000B           01063 _00129_DS_:
+               01064 ;       .line   154; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     BEEP_PORT( ) = 1;
+000B 2E80      01065         BTS     _PORT6bits,5
+               01066 ;       .line   155; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     beep_cnt--;
+000C 3B80      01067         DEC     _beep_cnt
+               01068 ;       .line   156; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     if( beep_delay++ >= 30 )
+000D 3000      01069         MOV     A,_beep_delay
+000E 3880      01070         MOV     r0x1013,A
+000F 3280      01071         INC     _beep_delay
+0010 081E      01072         MOV     A,@0x1e
+0011 3A00      01073         SUB     A,r0x1013
+0012 2403      01074         JBTS    STATUS,0
+0013 1000      01075         JMP     _00143_DS_
+               01076 ;       .line   158; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     if( beep_cnt == 0 )
+0014 0800      01077         MOV     A,@0x00
+0015 3C00      01078         OR      A,_beep_cnt
+0016 2503      01079         JBTS    STATUS,2
+0017 1000      01080         JMP     _00143_DS_
+               01081 ;       .line   160; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     beep_mode = BEEP_NONE;
+0018 3980      01082         CLR     _beep_mode
+               01083 ;       .line   161; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     beep_delay = 0;
+0019 3980      01084         CLR     _beep_delay
+               01085 ;       .line   164; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     break;  
+001A 1000      01086         JMP     _00143_DS_
+001B           01087 _00134_DS_:
+               01088 ;       .line   166; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     BEEP_PORT( ) = 1;
+001B 2E80      01089         BTS     _PORT6bits,5
+               01090 ;       .line   167; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     if( beep_delay++ >= 10 )
+001C 3000      01091         MOV     A,_beep_delay
+001D 3880      01092         MOV     r0x1013,A
+001E 3280      01093         INC     _beep_delay
+001F 080A      01094         MOV     A,@0x0a
+0020 3A00      01095         SUB     A,r0x1013
+0021 2403      01096         JBTS    STATUS,0
+0022 1000      01097         JMP     _00143_DS_
+               01098 ;       .line   169; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     beep_cnt--;
+0023 3B80      01099         DEC     _beep_cnt
+               01100 ;       .line   170; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     if( beep_cnt == 0 )
+0024 0800      01101         MOV     A,@0x00
+0025 3C00      01102         OR      A,_beep_cnt
+0026 2503      01103         JBTS    STATUS,2
+0027 1000      01104         JMP     _00138_DS_
+               01105 ;       .line   172; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     beep_delay = 0;
+0028 3980      01106         CLR     _beep_delay
+               01107 ;       .line   173; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     beep_mode = BEEP_NONE;
+0029 3980      01108         CLR     _beep_mode
+002A 1000      01109         JMP     _00143_DS_
+002B           01110 _00138_DS_:
+               01111 ;       .line   175; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     else if( beep_cnt == 1 )
+002B 3000      01112         MOV     A,_beep_cnt
+002C 0E01      01113         XOR     A,@0x01
+002D 2503      01114         JBTS    STATUS,2
+002E 1000      01115         JMP     _00143_DS_
+               01116 ;       .line   177; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     beep_delay = 0;
+002F 3980      01117         CLR     _beep_delay
+               01118 ;       .line   178; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     BEEP_PORT( ) = 0;
+0030 2A80      01119         BTC     _PORT6bits,5
+               01120 ;       .line   183; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     }
+0031           01121 _00143_DS_:
+               01122 ;       .line   182; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     }
+0031 3822      01123         RET     
+               01124 ; exit point of _beep_process
+               01125 
+               01126 ;***
+               01127 ;  pBlock Stats: dbName = C
+               01128 ;***
+               01129 ;has an exit
+               01130 ;; Starting pCode block
+               01131 S_XC8P9521_PWM_3__file_project_init     code
+0000           01132 _file_project_init:     ;Function start
+               01133 ; 2 exit points
+               01134 ;       .line   116; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     IOCP_W(IMR,0x09);               //TCC+PWM周期中断,根据需要调用  
+0000 0809      01135         mov     a,@0x09
+0001 380F      01136         iw      IMR
+               01137 ;       .line   117; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     PWMCON = 0xf8;                  //使能3路pwm输出，pwm=1/8*2(分频)*4clock*100=100us
+0002 08F8      01138         MOV     A,@0xf8
+0003 3880      01139         MOV     _PWMCON,A
+               01140 ;       .line   118; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     PRD = 100;                              //PWM周期寄存器
+0004 0864      01141         MOV     A,@0x64
+0005 3880      01142         MOV     _PRD,A
+               01143 ;       .line   119; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     }
+0006 3822      01144         RET     
+               01145 ; exit point of _file_project_init
+               01146 
+               01147 ;***
+               01148 ;  pBlock Stats: dbName = C
+               01149 ;***
+               01150 ;has an exit
+               01151 ;; Starting pCode block
+               01152 S_XC8P9521_PWM_3__file_init     code
+0000           01153 _file_init:     ;Function start
+               01154 ; 2 exit points
+               01155 ;       .line   95; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C      CONTW(0x02);                    //TCC 8分频
+0000 0802      01156         mov     a,@0x02
+0001 3802      01157         ctw
+               01158 ;       .line   96; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C      TCC = 6;                                //1/2 * 8 * (256-6) = 1000us    公式：1/IRC频率 * 预分频 * （256-初值）
+0002 0806      01159         MOV     A,@0x06
+0003 3880      01160         MOV     _TCC,A
+               01161 ;       .line   97; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C      PORT5 = 0;                              //
+0004 3980      01162         CLR     _PORT5
+               01163 ;       .line   98; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C      PORT6 = 0;                              //
+0005 3980      01164         CLR     _PORT6
+               01165 ;       .line   99; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C      IOCP_W(P5CR,0x0F);              // 50 51 52 53 均为输入
+0006 080F      01166         mov     a,@0x0F
+0007 3805      01167         iw      P5CR
+               01168 ;       .line   100; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     IOCP_W(P6CR,0x00);              // 65 66 67 输出
+0008 0800      01169         mov     a,@0x00
+0009 3806      01170         iw      P6CR
+               01171 ;       .line   101; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     IOCP_W(PHDCR,0xf0);             //端口上下拉控制寄存器，bit7-bit4对应P67-P64下拉;bit3-bit0对应P53-P50上拉 
+000A 08F0      01172         mov     a,@0xf0
+000B 3809      01173         iw      PHDCR
+               01174 ;       .line   102; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     IOCP_W(PDCR,0xff);              //端口下拉控制寄存器，  bit6-bit4对应P62-P60,bit3-bit0对应P53-P50
+000C 08FF      01175         mov     a,@0xff
+000D 380B      01176         iw      PDCR
+               01177 ;       .line   103; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     IOCP_W(PHCR,0xff);              //P6端口上拉控制寄存器  bit7-bit0对应P67-P60
+000E 08FF      01178         mov     a,@0xff
+000F 380D      01179         iw      PHCR
+               01180 ;       .line   104; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     IOCP_W(WDTCR,0x00);             //WDT 使能控制寄存器    IOCP_W(IMR,0x01);               //中断使能控制寄存器 
+0010 0800      01181         mov     a,@0x00
+0011 380E      01182         iw      WDTCR
+               01183 ;       .line   105; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     ISR = 0x0;                              //清TC0中断标志位 
+0012 3980      01184         CLR     _ISR
+               01185 ;       .line   106; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C     }
+0013 3822      01186         RET     
+               01187 ; exit point of _file_init
+               01188 
+               01189 ;***
+               01190 ;  pBlock Stats: dbName = C
+               01191 ;***
+               01192 ;has an exit
+               01193 ;; Starting pCode block
+               01194 S_XC8P9521_PWM_3__file_clrRam   code
+0000           01195 _file_clrRam:   ;Function start
+               01196 ; 2 exit points
+               01197 ;       .line   85; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C      for(RSR=0xD0;RSR<0xFF;RSR++)    //清零 BANK0 RAM  IAR-R0,RSR-R4
+0000 08D0      01198         MOV     A,@0xd0
+0001 3880      01199         MOV     _RSR,A
+0002           01200 _00107_DS_:
+0002 08FF      01201         MOV     A,@0xff
+0003 3A00      01202         SUB     A,_RSR
+0004 2003      01203         JBTC    STATUS,0
+0005 1000      01204         JMP     _00105_DS_
+               01205 ;       .line   87; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C      {IAR = 0;}
+0006 3980      01206         CLR     _IAR
+               01207 ;       .line   85; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C      for(RSR=0xD0;RSR<0xFF;RSR++)    //清零 BANK0 RAM  IAR-R0,RSR-R4
+0007 3280      01208         INC     _RSR
+0008 1000      01209         JMP     _00107_DS_
+0009           01210 _00105_DS_:
+               01211 ;       .line   88; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C      IAR = 0;
+0009 3980      01212         CLR     _IAR
+               01213 ;       .line   89; C:\USERS\14440\DESKTOP\XJ\FUN\XC8P9521-PWM-3.C      }
+000A 3822      01214         RET     
+               01215 ; exit point of _file_clrRam
+               01216 
+               01217 
+               01218 ;       code size estimation:
+               01219 ;         493+    7 =   500 instructions ( 1014 byte)
+               01220 
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+CONT                              00000002
+CPUCON                            0000000E
+END_OF_INTERRUPT                  0000001C
+IAR                               00000000
+ICIECR                            0000000D
+IMR                               0000000F
+ISR                               0000000F
+LVDCON                            00000007
+P5CR                              00000005
+P6CR                              00000006
+PCL                               00000002
+PDC1                              0000000A
+PDC2                              0000000B
+PDC3                              0000000C
+PDCR                              0000000B
+PHCR                              0000000D
+PHDCR                             00000009
+PORT5                             00000005
+PORT6                             00000006
+PRD                               00000009
+PWMCON                            00000008
+RSR                               00000004
+STATUS                            00000003
+STK00                             00000026
+STK01                             00000025
+STK02                             00000024
+STK03                             00000023
+STK04                             00000022
+STK05                             00000021
+STK06                             00000020
+TCC                               00000001
+WDTCR                             0000000E
+_00105_DS_                        00000009
+_00107_DS_                        00000002
+_00121_DS_                        00000015
+_00123_DS_                        00000019
+_00128_DS_                        00000009
+_00129_DS_                        0000000B
+_00134_DS_                        0000001B
+_00138_DS_                        0000002B
+_00143_DS_                        00000031
+_00150_DS_                        00000009
+_00155_DS_                        0000001F
+_00156_DS_                        00000027
+_00157_DS_                        0000002F
+_00163_DS_                        00000037
+_00166_DS_                        00000049
+_00168_DS_                        00000006
+_00169_DS_                        0000004B
+_00170_DS_                        00000076
+_00171_DS_                        00000079
+_00172_DS_                        0000007C
+_00177_DS_                        0000007F
+_00180_DS_                        00000088
+_00182_DS_                        00000055
+_00185_DS_                        0000008A
+_00226_DS_                        0000000C
+_00227_DS_                        00000014
+_00230_DS_                        0000003D
+_00231_DS_                        0000005B
+_00232_DS_                        00000063
+_00236_DS_                        00000085
+_00242_DS_                        0000000C
+_00243_DS_                        0000001B
+_00247_DS_                        00000022
+_00248_DS_                        00000028
+_00249_DS_                        00000030
+_00253_DS_                        00000037
+_00254_DS_                        0000003D
+_00255_DS_                        00000047
+_00256_DS_                        0000004C
+_00257_DS_                        00000051
+_00259_DS_                        00000056
+_00260_DS_                        00000064
+_00261_DS_                        00000067
+_00262_DS_                        0000006A
+_00265_DS_                        0000006C
+_00270_DS_                        00000009
+_00271_DS_                        0000000C
+_00277_DS_                        00000012
+_00278_DS_                        0000001C
+_00284_DS_                        00000022
+_00286_DS_                        0000002D
+_00292_DS_                        00000033
+_00293_DS_                        0000003D
+_00297_DS_                        00000043
+_00307_DS_                        00000022
+_00310_DS_                        00000035
+_00315_DS_                        00000048
+_00316_DS_                        0000004D
+_00323_DS_                        00000004
+_00361_DS_                        0000001D
+_00362_DS_                        00000028
+_00363_DS_                        00000031
+_A_BUFF                           00000010
+_CPUCON                           00000000
+_CPUCONbits                       00000000
+_IAR                              00000000
+_IARbits                          00000000
+_ICIECR                           00000000
+_ICIECRbits                       00000000
+_ISR                              00000000
+_ISRbits                          00000000
+_LVDCON                           00000000
+_LVDCONbits                       00000000
+_PCL                              00000000
+_PCLbits                          00000000
+_PDC1                             00000000
+_PDC1bits                         00000000
+_PDC2                             00000000
+_PDC2bits                         00000000
+_PDC3                             00000000
+_PDC3bits                         00000000
+_PORT5                            00000000
+_PORT5bits                        00000000
+_PORT6                            00000000
+_PORT6bits                        00000000
+_PRD                              00000000
+_PRDbits                          00000000
+_PWMCON                           00000000
+_PWMCONbits                       00000000
+_R3_BUFF                          00000011
+_RSR                              00000000
+_RSRbits                          00000000
+_STATUS                           00000000
+_STATUSbits                       00000000
+_TCC                              00000000
+_TCCbits                          00000000
+__sdcc_interrupt                  00000003
+__xc8p9521                        00000001
+_beep_cnt                         00000000
+_beep_delay                       00000000
+_beep_mode                        00000000
+_beep_process                     00000000
+_cir_mode                         00000000
+_cold_dty                         00000000
+_color_pwm_duty                   00000000
+_delayMs                          00000000
+_delayUs                          00000000
+_file_clrRam                      00000000
+_file_init                        00000000
+_file_project_init                00000000
+_fun_dty                          00000000
+_int_isr                          00000003
+_key_process                      00000000
+_led_cnt                          00000000
+_led_mode                         00000000
+_led_switch                       00000000
+_ledkey_delay                     00000000
+_main                             00000000
+_mode_switch                      00000000
+_once_pwm_duty                    00000000
+_output_process                   00000000
+_pwrkey_delay                     00000000
+_r_delay                          00000000
+_rgb_process                      00000000
+_shake_process                    00000000
+_sys_delay                        00000000
+r0x1013                           00000000
+r0x1014                           00000001
+
+
+Errors   :       0
+Warnings :       0 reported,       0 suppressed
+Messages :       0 reported,       0 suppressed
+

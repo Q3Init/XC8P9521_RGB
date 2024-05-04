@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Project>
+	<Name>XC8P9521-PWM</Name>
+	<Path>C:\Users\14440\Desktop\XJ\FUN</Path>
+	<Chip>XC8P9521</Chip>
+	<FilterIndex>2</FilterIndex>
+	<Previous_Instruction_Set>1</Previous_Instruction_Set>
+	<FileList>
+		<File>C:\Users\14440\Desktop\XJ\FUN\XC8P9521-PWM-3.c</File>
+	</FileList>
+	<H_FileList>
+		<H_File>C:\Users\14440\Desktop\XJ\FUN\XC8P9521.h</H_File>
+		<H_File>C:\Users\14440\Desktop\XJ\FUN\XJ_9521Define.h</H_File>
+	</H_FileList>
+	<List_FileList>
+		<List_File>C:\Users\14440\Desktop\XJ\FUN\XC8P9521-PWM.lst</List_File>
+	</List_FileList>
+	<Options>
+		<Option name="Clocks分频" value="4 Clocks"/>
+		<Option name="P5、P6上下拉控制" value="使能(P53下拉、P5上拉、P67-P64下拉、P63上拉,软件可控制)"/>
+		<Option name="P63端口" value="GPI"/>
+		<Option name="P6端口唤醒" value="非独立控制"/>
+		<Option name="RTC" value="禁止"/>
+		<Option name="VDD供电方式" value="内部5V"/>
+		<Option name="二级驱动增强" value="P60/P61/P62 二级强灌禁止"/>
+		<Option name="代码加密" value="禁止"/>
+		<Option name="休眠唤醒设置" value="兼容老153系列"/>
+		<Option name="低压复位" value="1.8V"/>
+		<Option name="复位时间" value="PWRT=WDT=18ms"/>
+		<Option name="复位端口上拉" value="禁止"/>
+		<Option name="振荡器倍频选项" value="禁止"/>
+		<Option name="振荡模式" value="IRC_8M"/>
+		<Option name="晶振脚内置电容选择" value="晶振脚内置电容关闭"/>
+		<Option name="查表范围" value="1/4K"/>
+		<Option name="看门狗" value="禁止"/>
+		<Option name="端口特性" value="SMT"/>
+		<Option name="驱动增强" value="禁止"/>
+	</Options>
+</Project>
